@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { Hero } from '../components/Hero.jsx';
 import CartaLibro from '../components/CartaLibro.jsx';
 import Sucursales from '../components/Sucursales.jsx';
+import Almacen from '../components/Almacen.jsx';
 import { Antipasti, CartaIntro, HistoriaResumen, Ocasiones, Recomendaciones, Restaurante, Vinos } from '../components/Secciones.jsx';
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
         <CartaLibro />
         <Recomendaciones />
         <Antipasti />
+        <Almacen />
         <Ocasiones />
         <Vinos />
         <HistoriaResumen />

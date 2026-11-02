@@ -6,6 +6,7 @@ import { DIRECCION, HERO_IMG, TELEFONO, TEL_HREF, wa } from '../config.js';
 export const NAV = [
   ['El restaurante', '/#restaurante'],
   ['La carta', '/#carta'],
+  ['Pastas frescas', '/#pastas-frescas'],
   ['Cocina de Sofía', '/#sofia'],
   ['Vinos y tragos', '/#vinos'],
   ['Eventos', '/#eventos'],

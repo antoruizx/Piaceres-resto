@@ -1,0 +1,43 @@
+{
+  "grupos": [
+    {
+      "id": "pastas",
+      "titulo": "Pastas frescas",
+      "nota": "hechas cada mañana",
+      "items": [
+        { "id": "tortelli-casa", "nombre": "Tortelli al vino tinto", "desc": "Ricota y nuez", "presentacion": "x 500 g", "precio": 9800, "veg": true },
+        { "id": "sorrentinos-casa", "nombre": "Sorrentinos de calabaza", "desc": "Calabaza asada y queso de cabra", "presentacion": "x 500 g", "precio": 9500, "veg": true },
+        { "id": "ravioles-casa", "nombre": "Ravioles de espinaca", "desc": "Espinaca, ricota y nuez moscada", "presentacion": "x 500 g", "precio": 8500, "veg": true },
+        { "id": "capelletti-casa", "nombre": "Capelletti de jamón y queso", "desc": "Jamón cocido natural y mozzarella", "presentacion": "x 500 g", "precio": 9200, "veg": false },
+        { "id": "noquis-casa", "nombre": "Ñoquis de papa", "desc": "Papa y sémola, livianos", "presentacion": "x 500 g", "precio": 5900, "veg": true },
+        { "id": "tallarines-casa", "nombre": "Tallarines al huevo", "desc": "Cortados a cuchillo", "presentacion": "x 500 g", "precio": 4900, "veg": true },
+        { "id": "pappardelle-casa", "nombre": "Pappardelle", "desc": "Cinta ancha, ideal para ragú", "presentacion": "x 500 g", "precio": 5500, "veg": true }
+      ]
+    },
+    {
+      "id": "salsas",
+      "titulo": "Salsas listas",
+      "nota": "de nuestra cocina",
+      "items": [
+        { "id": "pomodoro", "nombre": "Pomodoro y albahaca", "desc": "Tomate perita y aceite de oliva", "presentacion": "frasco 400 g", "precio": 4800, "veg": true },
+        { "id": "ragu-osobuco", "nombre": "Ragú de osobuco al malbec", "desc": "Cocción lenta de 8 horas", "presentacion": "frasco 400 g", "precio": 7900, "veg": false },
+        { "id": "crema-hongos", "nombre": "Crema de hongos de pino", "desc": "Hongos, crema y tomillo", "presentacion": "frasco 400 g", "precio": 6500, "veg": true },
+        { "id": "pesto", "nombre": "Pesto de albahaca y nuez", "desc": "Albahaca fresca y parmesano", "presentacion": "frasco 200 g", "precio": 5900, "veg": true },
+        { "id": "cuatro-quesos", "nombre": "Cuatro quesos", "desc": "Parmesano, gorgonzola, fontina y crema", "presentacion": "frasco 400 g", "precio": 6200, "veg": true }
+      ]
+    },
+    {
+      "id": "quesos",
+      "titulo": "Quesos",
+      "nota": "seleccionados",
+      "items": [
+        { "id": "parmesano", "nombre": "Parmesano estacionado", "desc": "12 meses de estacionamiento", "presentacion": "x 250 g", "precio": 8900, "veg": true },
+        { "id": "ricota", "nombre": "Ricota de campo", "desc": "Fresca, de tambo local", "presentacion": "x 500 g", "precio": 3900, "veg": true },
+        { "id": "burrata", "nombre": "Burrata", "desc": "Para pizzas y ensaladas", "presentacion": "x 200 g", "precio": 5900, "veg": true },
+        { "id": "cabra", "nombre": "Queso de cabra", "desc": "Untable, de Tafí del Valle", "presentacion": "x 200 g", "precio": 6900, "veg": true },
+        { "id": "provolone", "nombre": "Provolone ahumado", "desc": "Para la parrilla", "presentacion": "x 250 g", "precio": 6500, "veg": true },
+        { "id": "gorgonzola", "nombre": "Gorgonzola", "desc": "Cremoso, para salsas", "presentacion": "x 200 g", "precio": 5800, "veg": true }
+      ]
+    }
+  ]
+}
