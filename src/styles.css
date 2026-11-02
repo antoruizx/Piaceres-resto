@@ -143,8 +143,21 @@ button.chip[aria-pressed="true"]{background:var(--espresso);color:var(--ivory);b
 .entra{opacity:0;transform:translateY(24px);animation:entra 1s var(--ease) forwards;animation-delay:calc(var(--i, 0) * .14s + .25s)}
 @keyframes entra{to{opacity:1;transform:none}}
 
-.btn-delivery{flex:none;width:148px;height:148px;border-radius:50%;background:var(--sand);color:var(--espresso-dk);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-decoration:none;font-size:12px;letter-spacing:.14em;text-transform:uppercase;text-align:center;line-height:1.3;transition:transform .6s var(--ease),background .3s;box-shadow:0 20px 50px -20px rgba(0,0,0,.6)}
+.btn-delivery{flex:none;width:148px;height:148px;border-radius:50%;background:var(--sand);color:var(--espresso-dk);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-decoration:none;font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;text-align:center;line-height:1.3;transition:transform .6s var(--ease),background .3s;box-shadow:0 20px 50px -20px rgba(0,0,0,.6)}
 .btn-delivery:hover{transform:scale(1.05) rotate(-4deg);background:#C4AE9F}
+
+/* Hero del inicio: de borde a borde, sin el marco */
+.hero-full{margin:-12px -12px 0;width:calc(100% + 24px);max-width:none;min-height:max(640px, 100svh)}
+.hero-full .barra > *{padding-left:clamp(20px,3vw,48px);padding-right:clamp(20px,3vw,48px)}
+.hero-full .hero-pie{padding-left:clamp(20px,5vw,80px);padding-right:clamp(20px,5vw,80px)}
+
+/* Cinta de promoción */
+.cinta{position:relative;z-index:2;overflow:hidden;background:#0E0B0A;color:var(--sand);border-top:1px solid rgba(177,153,137,.45);border-bottom:1px solid rgba(177,153,137,.45)}
+.cinta-pista{display:flex;width:max-content;animation:cinta 48s linear infinite}
+.cinta:hover .cinta-pista{animation-play-state:paused}
+.cinta-item{display:inline-flex;align-items:center;gap:36px;padding:16px 18px 16px 18px;white-space:nowrap;font-family:var(--serif);font-size:clamp(17px,1.6vw,22px);letter-spacing:.08em;text-transform:uppercase}
+.cinta-sep{color:var(--sand);opacity:.8;flex:none}
+@keyframes cinta{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}
 
 /* Hero compacto (páginas internas) */
 .hero-compacto{min-height:auto}

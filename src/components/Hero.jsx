@@ -66,9 +66,27 @@ function Capas({ img }) {
   );
 }
 
+const PROMO = '10% de descuento en la cuenta, entradas y una torta mediana de regalo para tus invitados';
+
+// Cinta que pasa de derecha a izquierda. El texto se repite para que el loop no tenga cortes;
+// los lectores de pantalla leen solo la primera copia.
+function Cinta() {
+  const items = Array.from({ length: 4 }, (_, i) => (
+    <span className="cinta-item" key={i} aria-hidden={i > 0 ? 'true' : undefined}>
+      {PROMO}
+      <svg className="cinta-sep" width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M5 0l5 5-5 5-5-5z" fill="currentColor" /></svg>
+    </span>
+  ));
+  return (
+    <div className="cinta" role="note" aria-label="Promoción">
+      <div className="cinta-pista">{items}{items}</div>
+    </div>
+  );
+}
+
 export function Hero() {
   return (
-    <section className="hero ancho" onPointerMove={mover} onPointerLeave={salir} aria-label="Bienvenida">
+    <section className="hero hero-full" onPointerMove={mover} onPointerLeave={salir} aria-label="Bienvenida">
       <Capas img={HERO_IMG} />
       <Cabecera />
       <div className="hero-pie">
@@ -88,6 +106,7 @@ export function Hero() {
           <Campana /><span>Pedir<br />delivery</span>
         </a>
       </div>
+      <Cinta />
     </section>
   );
 }
