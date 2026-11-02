@@ -10,7 +10,7 @@
           "nombre": "Tortelli al vino tinto",
           "desc": "Ricota y nuez",
           "presentacion": "x 500 g",
-          "precio": 185,
+          "precio": 9800,
           "veg": true,
           "vegano": false,
           "sinTacc": false
@@ -20,7 +20,7 @@
           "nombre": "Sorrentinos de calabaza",
           "desc": "Calabaza asada y queso de cabra",
           "presentacion": "x 500 g",
-          "precio": 175,
+          "precio": 9500,
           "veg": true,
           "vegano": false,
           "sinTacc": false
@@ -30,7 +30,7 @@
           "nombre": "Ravioles de espinaca",
           "desc": "Espinaca, ricota y nuez moscada",
           "presentacion": "x 500 g",
-          "precio": 160,
+          "precio": 8500,
           "veg": true,
           "vegano": false,
           "sinTacc": false
@@ -40,7 +40,7 @@
           "nombre": "Capelletti de jamón y queso",
           "desc": "Jamón cocido natural y mozzarella",
           "presentacion": "x 500 g",
-          "precio": 170,
+          "precio": 9200,
           "veg": false,
           "vegano": false,
           "sinTacc": false
@@ -50,7 +50,7 @@
           "nombre": "Ñoquis de papa",
           "desc": "Papa y sémola, livianos",
           "presentacion": "x 500 g",
-          "precio": 110,
+          "precio": 5900,
           "veg": true,
           "vegano": false,
           "sinTacc": false
@@ -60,7 +60,7 @@
           "nombre": "Tallarines al huevo",
           "desc": "Cortados a cuchillo",
           "presentacion": "x 500 g",
-          "precio": 95,
+          "precio": 4900,
           "veg": true,
           "vegano": false,
           "sinTacc": false
@@ -70,7 +70,7 @@
           "nombre": "Pappardelle",
           "desc": "Cinta ancha, ideal para ragú",
           "presentacion": "x 500 g",
-          "precio": 105,
+          "precio": 5500,
           "veg": true,
           "vegano": false,
           "sinTacc": false
@@ -80,7 +80,7 @@
           "nombre": "Ñoquis sin TACC",
           "desc": "Papa y harina de arroz, elaborados aparte",
           "presentacion": "x 500 g",
-          "precio": 130,
+          "precio": 6900,
           "veg": true,
           "sinTacc": true,
           "vegano": false
@@ -90,7 +90,7 @@
           "nombre": "Fusilli de lentejas",
           "desc": "Solo harina de lentejas y agua",
           "presentacion": "x 500 g",
-          "precio": 125,
+          "precio": 6500,
           "veg": true,
           "vegano": true,
           "sinTacc": true
@@ -107,7 +107,7 @@
           "nombre": "Pomodoro y albahaca",
           "desc": "Tomate perita y aceite de oliva",
           "presentacion": "frasco 400 g",
-          "precio": 95,
+          "precio": 4800,
           "veg": true,
           "vegano": true,
           "sinTacc": true
@@ -117,7 +117,7 @@
           "nombre": "Ragú de osobuco al malbec",
           "desc": "Cocción lenta de 8 horas",
           "presentacion": "frasco 400 g",
-          "precio": 155,
+          "precio": 7900,
           "veg": false,
           "vegano": false,
           "sinTacc": true
@@ -127,7 +127,7 @@
           "nombre": "Crema de hongos de pino",
           "desc": "Hongos, crema y tomillo",
           "presentacion": "frasco 400 g",
-          "precio": 125,
+          "precio": 6500,
           "veg": true,
           "vegano": false,
           "sinTacc": true
@@ -137,7 +137,7 @@
           "nombre": "Pesto de albahaca y nuez",
           "desc": "Albahaca fresca y parmesano",
           "presentacion": "frasco 200 g",
-          "precio": 120,
+          "precio": 5900,
           "veg": true,
           "vegano": false,
           "sinTacc": true
@@ -147,7 +147,7 @@
           "nombre": "Cuatro quesos",
           "desc": "Parmesano, gorgonzola, fontina y crema",
           "presentacion": "frasco 400 g",
-          "precio": 120,
+          "precio": 6200,
           "veg": true,
           "vegano": false,
           "sinTacc": true
@@ -164,7 +164,7 @@
           "nombre": "Parmesano estacionado",
           "desc": "12 meses de estacionamiento",
           "presentacion": "x 250 g",
-          "precio": 175,
+          "precio": 8900,
           "veg": true,
           "vegano": false,
           "sinTacc": false
@@ -174,7 +174,7 @@
           "nombre": "Ricota de campo",
           "desc": "Fresca, de tambo local",
           "presentacion": "x 500 g",
-          "precio": 85,
+          "precio": 3900,
           "veg": true,
           "vegano": false,
           "sinTacc": false
@@ -184,7 +184,7 @@
           "nombre": "Burrata",
           "desc": "Para pizzas y ensaladas",
           "presentacion": "x 200 g",
-          "precio": 125,
+          "precio": 5900,
           "veg": true,
           "vegano": false,
           "sinTacc": false
@@ -192,9 +192,9 @@
         {
           "id": "cabra",
           "nombre": "Queso de cabra",
-          "desc": "Untable, de productores de la península",
+          "desc": "Untable, de Tafí del Valle",
           "presentacion": "x 200 g",
-          "precio": 140,
+          "precio": 6900,
           "veg": true,
           "vegano": false,
           "sinTacc": false
@@ -204,7 +204,7 @@
           "nombre": "Provolone ahumado",
           "desc": "Para la parrilla",
           "presentacion": "x 250 g",
-          "precio": 135,
+          "precio": 6500,
           "veg": true,
           "vegano": false,
           "sinTacc": false
@@ -214,7 +214,7 @@
           "nombre": "Gorgonzola",
           "desc": "Cremoso, para salsas",
           "presentacion": "x 200 g",
-          "precio": 120,
+          "precio": 5800,
           "veg": true,
           "vegano": false,
           "sinTacc": false
@@ -224,7 +224,7 @@
           "nombre": "Queso de castañas de cajú",
           "desc": "Fermentado, untable",
           "presentacion": "x 200 g",
-          "precio": 150,
+          "precio": 7200,
           "veg": true,
           "vegano": true,
           "sinTacc": true

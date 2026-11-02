@@ -1,0 +1,100 @@
+[
+  {
+    "id": "lunes-pastas",
+    "dias": [
+      1
+    ],
+    "titulo": "Lunes de pastas",
+    "bajada": "20% off en todas las pastas",
+    "secciones": [
+      "pastas"
+    ],
+    "pct": 20,
+    "img": "tortelli"
+  },
+  {
+    "id": "martes-verde",
+    "dias": [
+      2
+    ],
+    "titulo": "Martes verde",
+    "bajada": "15% off en la huerta de Sofía",
+    "secciones": [
+      "huerta"
+    ],
+    "pct": 15,
+    "img": "zanahorias"
+  },
+  {
+    "id": "miercoles-parrilla",
+    "dias": [
+      3
+    ],
+    "titulo": "Miércoles de parrilla",
+    "bajada": "15% off en cortes a la leña",
+    "secciones": [
+      "parrilla"
+    ],
+    "pct": 15,
+    "img": "medallon-lomo"
+  },
+  {
+    "id": "jueves-compartir",
+    "dias": [
+      4
+    ],
+    "titulo": "Jueves para compartir",
+    "bajada": "25% off en antipasti",
+    "secciones": [
+      "antipasti"
+    ],
+    "pct": 25,
+    "img": "bruschettas"
+  },
+  {
+    "id": "finde-tragos",
+    "dias": [
+      5,
+      6
+    ],
+    "titulo": "Tragos de autor",
+    "bajada": "20% off en la barra",
+    "secciones": [
+      "tragos"
+    ],
+    "pct": 20,
+    "img": "pizza-crudo"
+  },
+  {
+    "id": "domingo-almacen",
+    "dias": [
+      0
+    ],
+    "titulo": "Domingo de almacén",
+    "bajada": "20% off en pastas frescas para llevar",
+    "secciones": [
+      "almacen-pastas"
+    ],
+    "pct": 20,
+    "img": "tortelli"
+  },
+  {
+    "id": "postre-casa",
+    "dias": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "titulo": "Cerrá con algo dulce",
+    "bajada": "10% off en postres, todos los días",
+    "secciones": [
+      "dolci"
+    ],
+    "pct": 10,
+    "img": "volcan"
+  }
+]
