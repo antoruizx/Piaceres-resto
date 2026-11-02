@@ -14,15 +14,16 @@ export function Restaurante() {
       <div className="contenedor restaurante">
         <div className="reveal">
           <Etiqueta>Sobre el restaurante</Etiqueta>
-          <h2 className="titulo" id="rest-tit">Piaceres — una mesa para todos los gustos</h2>
+          <h2 className="titulo" id="rest-tit">Piaceri Argentini — una mesa para todos los gustos</h2>
           <p className="parrafo">
-            Un lugar para comer sin apuro: cortes a la leña, pastas frescas hechas cada mañana y una carta vegetariana
-            pensada con la misma técnica y el mismo producto.
+            Un rincón argentino en el Caribe mexicano para comer sin apuro: cortes a la leña, pastas frescas hechas cada
+            mañana y una carta vegetariana pensada con la misma técnica y el mismo producto.
           </p>
-          <p className="parrafo">Para una cena de a dos, una mesa larga con amigos o una copa de vino al final del día.</p>
+          <p className="parrafo">Para una cena de a dos después de la playa, una mesa larga con amigos o una copa de malbec mientras baja el sol.</p>
           <div className="chips">
             <span className="chip">Parrilla a la leña</span>
             <span className="chip">Cocina vegetariana de autor</span>
+            <span className="chip">Frente al Caribe</span>
           </div>
         </div>
         <div className="zoom foto-centro reveal">
@@ -35,7 +36,7 @@ export function Restaurante() {
               'Mediodía y noche, todos los días',
               'Entrada de cortesía de la casa',
               'Opciones vegetarianas, veganas y sin TACC',
-              'Delivery propio en seis zonas',
+              'Delivery propio de Cancún a Tulum',
               'Vinos argentinos por copa',
             ]}
           />
@@ -230,7 +231,7 @@ export function Ocasiones() {
 const BEBIDAS = [
   ['Tintos', [['Malbec de altura', 'Valle de Uco'], ['Cabernet Franc', 'Gualtallary'], ['Pinot Noir', 'Patagonia']]],
   ['Blancos y espumantes', [['Torrontés', 'Cafayate'], ['Chardonnay', 'Tupungato'], ['Espumante Brut Nature', 'Método tradicional']]],
-  ['Tragos de autor', [['Negroni de la casa'], ['Spritz de pomelo'], ['Gin tonic de pepino']]],
+  ['Tragos de autor', [['Negroni de la casa'], ['Fernet con cola', 'El clásico argentino'], ['Mezcalita de maracuyá', 'Mezcal, maracuyá y sal de chile']]],
   ['Sin alcohol', [['Albahaca y limón'], ['Frutos rojos'], ['Vermut sin alcohol']]],
 ];
 export function Vinos() {
@@ -242,7 +243,7 @@ export function Vinos() {
             <Etiqueta>Bodega y barra</Etiqueta>
             <h2 className="titulo" id="vinos-tit">Vinos y tragos</h2>
           </div>
-          <p className="parrafo">Etiquetas argentinas por copa o por botella, y una barra con tragos de autor y opciones sin alcohol.</p>
+          <p className="parrafo">Etiquetas argentinas por copa o por botella, de Mendoza a la Patagonia, y una barra donde el fernet se cruza con el mezcal.</p>
         </div>
         <div className="vinos reveal">
           {BEBIDAS.map(([t, items]) => (
@@ -270,8 +271,9 @@ export function HistoriaResumen() {
             <h2 className="titulo" id="sofia-tit">La cocina de Sofía</h2>
             <p className="parrafo">
               Sofía se formó como chef con una idea clara: que la cocina gourmet tenga lugar para todos. Con el apoyo
-              incondicional de su mamá y la ayuda de tíos y primos abrió el primer local. Hoy Piaceres tiene seis
-              casas y la misma convicción de siempre.
+              incondicional de su mamá y la ayuda de tíos y primos abrió el primer local. Después cruzó el continente con
+              la parrilla y las pastas de los domingos: hoy Piaceri Argentini tiene seis casas en el Caribe mexicano y la
+              misma convicción de siempre.
             </p>
             <Link className="link-linea" to="/historia">Leer la historia completa <Flecha w={28} /></Link>
           </div>

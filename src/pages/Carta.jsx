@@ -10,7 +10,7 @@ const PARAM = { veg: 'veg', vegano: 'vegano', sinTacc: 'sintacc' };
 export default function Carta() {
   const [params, setParams] = useSearchParams();
   const filtros = Object.fromEntries(FILTROS.map(([k]) => [k, params.get(PARAM[k]) === '1']));
-  useEffect(() => { document.title = 'La carta · Piaceres'; }, []);
+  useEffect(() => { document.title = 'La carta · Piaceri Argentini'; }, []);
   const cambiar = (k) =>
     setParams((prev) => {
       const sig = new URLSearchParams(prev);
@@ -20,7 +20,7 @@ export default function Carta() {
 
   return (
     <>
-      <HeroPagina ciudad="Piaceres" titulo="La carta" img="zanahorias" />
+      <HeroPagina ciudad="Piaceri Argentini" titulo="La carta" img="zanahorias" />
       <main id="main" className="contenido ancho">
         <div className="carta-barra">
           <div className="contenedor carta-barra-in">

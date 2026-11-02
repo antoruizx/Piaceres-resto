@@ -3,7 +3,7 @@ import { HeroPagina } from '../components/Hero.jsx';
 import { Etiqueta, Foto } from '../components/Base.jsx';
 
 export default function Historia() {
-  useEffect(() => { document.title = 'Nuestra historia · Piaceres'; }, []);
+  useEffect(() => { document.title = 'Nuestra historia · Piaceri Argentini'; }, []);
   return (
     <>
       <HeroPagina ciudad="Nuestra historia" titulo="La cocina de Sofía" img="pizza-crudo" />
@@ -13,7 +13,7 @@ export default function Historia() {
             <div className="reveal">
               <Etiqueta>Desde el primer día</Etiqueta>
               <p className="parrafo">
-                Piaceres nació alrededor de una mesa familiar, donde cocinar siempre fue la forma más sincera de decir
+                Piaceri Argentini nació alrededor de una mesa familiar en Tucumán, donde cocinar siempre fue la forma más sincera de decir
                 “te quiero”. Sofía creció entre ollas y sobremesas largas. Cuando decidió formarse como chef, lo hizo con
                 una idea clara: que la cocina gourmet tuviera lugar para todos, y que un plato vegetariano pudiera ser tan
                 memorable como cualquier otro.
@@ -25,7 +25,9 @@ export default function Historia() {
                 primer local.
               </p>
               <p className="parrafo">
-                Hoy Piaceres tiene seis sucursales y sigue siendo lo que fue desde el primer día. En nuestra carta
+                Años después, Sofía cruzó el continente con la parrilla, las pastas de los domingos y el mate bajo el brazo, y
+                encontró en el Caribe mexicano un mar turquesa que la adoptó. Hoy Piaceri Argentini tiene seis casas entre
+                Cancún y Tulum, y sigue siendo lo que fue desde el primer día. En nuestra carta
                 conviven carnes nobles y una propuesta vegetariana de autor creada por Sofía, pensada con el mismo
                 cuidado y el mismo respeto por el producto. Porque en una buena mesa, nadie se queda afuera.
               </p>

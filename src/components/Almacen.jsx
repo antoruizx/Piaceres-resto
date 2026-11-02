@@ -17,7 +17,7 @@ export default function Almacen() {
             <Foto nombre="tortelli" alt="Tortelli frescos al vino tinto listos para cocinar" sizes="(max-width: 860px) 100vw, 45vw" />
           </div>
           <div className="reveal">
-            <Etiqueta>Almacén Piaceres</Etiqueta>
+            <Etiqueta>Almacén Piaceri</Etiqueta>
             <h2 className="titulo" id="alm-tit">Pastas frescas para llevar</h2>
             <p className="parrafo">
               Las mismas pastas que servimos en el salón, hechas cada mañana, para cocinar en tu casa. Sumá una salsa de

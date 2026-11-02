@@ -1,4 +1,5 @@
-// Piezas chicas reutilizables: íconos de línea, monograma, foto optimizada, etiqueta y lista numerada.
+// Piezas chicas reutilizables: íconos de línea, logo, foto optimizada, etiqueta y lista numerada.
+import { useId } from 'react';
 
 const linea = { fill: 'none', stroke: 'currentColor', strokeWidth: 1.2, strokeLinecap: 'round', strokeLinejoin: 'round' };
 
@@ -33,11 +34,33 @@ export const IconoMenu = ({ abierto }) => (
   </svg>
 );
 
-export const Monograma = ({ alto = 44 }) => (
-  <svg width={alto * 0.72} height={alto} viewBox="0 0 36 50" aria-hidden="true">
-    <ellipse cx="18" cy="25" rx="16.5" ry="23.5" fill="none" stroke="currentColor" strokeWidth=".9" />
-    <text x="18" y="33" textAnchor="middle" fontFamily="Forum, Georgia, serif" fontSize="25" fill="currentColor">P</text>
-  </svg>
+// Emblema de la marca: óvalo con la bandera argentina (celeste, blanco, celeste) y el Sol de Mayo.
+const RAYOS = Array.from({ length: 16 }, (_, i) => (i * Math.PI) / 8);
+export function Monograma({ alto = 44 }) {
+  const id = useId().replace(/:/g, '');
+  return (
+    <svg width={alto * 0.72} height={alto} viewBox="0 0 36 50" aria-hidden="true">
+      <defs><clipPath id={`ov${id}`}><ellipse cx="18" cy="25" rx="16.5" ry="23.5" /></clipPath></defs>
+      <g clipPath={`url(#ov${id})`}>
+        <rect width="36" height="50" fill="#FFFFFF" />
+        <rect width="36" height="17.4" fill="#74ACDF" />
+        <rect y="32.6" width="36" height="17.4" fill="#74ACDF" />
+      </g>
+      <g stroke="#E8A90C" strokeWidth=".8" strokeLinecap="round">
+        {RAYOS.map((a, i) => {
+          const r1 = 3.6, r2 = i % 2 ? 5.6 : 6.6;
+          return <line key={i} x1={18 + r1 * Math.cos(a)} y1={25 + r1 * Math.sin(a)} x2={18 + r2 * Math.cos(a)} y2={25 + r2 * Math.sin(a)} />;
+        })}
+      </g>
+      <circle cx="18" cy="25" r="3.2" fill="#F6B40E" stroke="#C98A06" strokeWidth=".4" />
+      <ellipse cx="18" cy="25" rx="16.5" ry="23.5" fill="none" stroke="currentColor" strokeWidth=".9" />
+    </svg>
+  );
+}
+
+// Logo completo: emblema + "PIACERI / ARGENTINI".
+export const LogoTexto = () => (
+  <span className="logo-txt">PIACERI<small>ARGENTINI</small></span>
 );
 
 const ANCHOS = [480, 960, 1600];

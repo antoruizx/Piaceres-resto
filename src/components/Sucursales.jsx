@@ -14,7 +14,7 @@ function distanciaKm(a, b) {
 const Ph = ({ children }) => <span className="ph">{children}</span>;
 
 export default function Sucursales() {
-  const [sel, setSel] = useState('centro');
+  const [sel, setSel] = useState('zona-hotelera');
   const [msg, setMsg] = useState('');
   const [buscando, setBuscando] = useState(false);
   const s = sucursales.find((x) => x.id === sel);
@@ -36,7 +36,7 @@ export default function Sucursales() {
           .map((x) => ({ ...x, km: distanciaKm(yo, x) }))
           .sort((a, b) => a.km - b.km);
         setSel(mejor.id);
-        setMsg(`Tu Piaceres más cercano es ${mejor.nombre}, a ${mejor.km.toFixed(1).replace('.', ',')} km.`);
+        setMsg(`Tu Piaceri más cercano es ${mejor.nombre}, a ${mejor.km.toFixed(1).replace('.', ',')} km.`);
       },
       () => {
         setBuscando(false);
@@ -46,15 +46,15 @@ export default function Sucursales() {
     );
   };
 
-  const envio = s.envioGratisDesde != null ? `$ ${s.envioGratisDesde.toLocaleString('es-AR')}` : PH.monto;
+  const envio = s.envioGratisDesde != null ? `$ ${s.envioGratisDesde.toLocaleString('es-MX')}` : PH.monto;
 
   return (
     <section className="seccion" id="sucursales" aria-labelledby="suc-tit">
       <div className="contenedor sucursales">
         <div className="reveal">
           <Etiqueta>Sucursales</Etiqueta>
-          <h2 className="titulo" id="suc-tit">Tu Piaceres más cercano</h2>
-          <p className="parrafo">Seis casas en Tucumán. Usá tu ubicación o elegí tu zona para ver dirección, horarios y delivery.</p>
+          <h2 className="titulo" id="suc-tit">Tu Piaceri más cercano</h2>
+          <p className="parrafo">Seis casas en el Caribe mexicano, de Cancún a Tulum. Usá tu ubicación o elegí tu zona para ver dirección, horarios y delivery.</p>
           <div className="geo">
             <button type="button" className="btn btn-sec" onClick={usarUbicacion} disabled={buscando}>Usar mi ubicación</button>
             <p className="geo-msg" role="status">{msg}</p>

@@ -1,8 +1,8 @@
 [
-  {"id": "centro", "nombre": "Centro", "direccion": "24 de Septiembre 755, San Miguel de Tucumán", "lat": -26.8299, "lng": -65.2075, "horario": "12 a 16 h y 20 a 00 h", "deliveryMin": null, "envioGratisDesde": null},
-  {"id": "barrio-norte", "nombre": "Barrio Norte", "direccion": null, "lat": null, "lng": null, "horario": "12 a 16 h y 20 a 00 h", "deliveryMin": null, "envioGratisDesde": null},
-  {"id": "barrio-sur", "nombre": "Barrio Sur", "direccion": "Lamadrid 1150, Barrio Sur, San Miguel de Tucumán", "lat": -26.8405, "lng": -65.2072, "horario": "12 a 16 h y 20 a 00 h", "deliveryMin": null, "envioGratisDesde": null},
-  {"id": "yerba-buena", "nombre": "Yerba Buena", "direccion": null, "lat": null, "lng": null, "horario": "12 a 16 h y 20 a 00 h", "deliveryMin": null, "envioGratisDesde": null},
-  {"id": "tafi-viejo", "nombre": "Tafí Viejo", "direccion": null, "lat": null, "lng": null, "horario": "12 a 16 h y 20 a 00 h", "deliveryMin": null, "envioGratisDesde": null},
-  {"id": "banda-rio-sali", "nombre": "Banda del Río Salí", "direccion": null, "lat": null, "lng": null, "horario": "12 a 16 h y 20 a 00 h", "deliveryMin": null, "envioGratisDesde": null}
+  {"id": "zona-hotelera", "nombre": "Zona Hotelera", "direccion": "Blvd. Kukulcán km 9.5, Zona Hotelera, Cancún", "lat": 21.135, "lng": -86.747, "horario": "13 a 17 h y 19 a 23:30 h", "deliveryMin": 35, "envioGratisDesde": 1200},
+  {"id": "cancun-centro", "nombre": "Cancún Centro", "direccion": "Av. Tulum 220, SM 4, Cancún", "lat": 21.1605, "lng": -86.8265, "horario": "13 a 17 h y 19 a 23:30 h", "deliveryMin": 30, "envioGratisDesde": 1000},
+  {"id": "puerto-morelos", "nombre": "Puerto Morelos", "direccion": "Av. Rafael E. Melgar 14, Puerto Morelos", "lat": 20.8475, "lng": -86.8755, "horario": "13 a 17 h y 19 a 23:30 h", "deliveryMin": 40, "envioGratisDesde": 1200},
+  {"id": "playa-del-carmen", "nombre": "Playa del Carmen", "direccion": "Quinta Avenida y Calle 26, Playa del Carmen", "lat": 20.629, "lng": -87.0725, "horario": "13 a 17 h y 19 a 23:30 h", "deliveryMin": 35, "envioGratisDesde": 1200},
+  {"id": "cozumel", "nombre": "Cozumel", "direccion": "Av. Rafael E. Melgar 600, San Miguel de Cozumel", "lat": 20.507, "lng": -86.952, "horario": "13 a 17 h y 19 a 23:30 h", "deliveryMin": 40, "envioGratisDesde": 1200},
+  {"id": "tulum", "nombre": "Tulum", "direccion": "Carretera Tulum–Boca Paila km 5, Zona Hotelera, Tulum", "lat": 20.183, "lng": -87.452, "horario": "13 a 17 h y 19 a 23:30 h", "deliveryMin": 45, "envioGratisDesde": 1500}
 ]

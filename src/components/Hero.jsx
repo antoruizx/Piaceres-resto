@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Campana, Flecha, Foto, IconoMenu, Monograma, Pin, Telefono } from './Base.jsx';
+import { Campana, Flecha, Foto, IconoMenu, LogoTexto, Monograma, Pin, Telefono } from './Base.jsx';
 import { DIRECCION, HERO_IMG, TELEFONO, TEL_HREF, wa } from '../config.js';
 
 export const NAV = [
@@ -18,10 +18,10 @@ function Cabecera() {
   return (
     <header className="cabecera">
       <div className="barra">
-        <div className="barra-dir"><Pin />{DIRECCION}, Tucumán</div>
+        <div className="barra-dir"><Pin />{DIRECCION}, Cancún</div>
         <div className="barra-logo">
-          <Link to="/" className="logo" aria-label="Piaceres, ir al inicio">
-            <Monograma /><span className="logo-txt">PIACERES</span>
+          <Link to="/" className="logo" aria-label="Piaceri Argentini, ir al inicio">
+            <Monograma /><LogoTexto />
           </Link>
         </div>
         <div className="barra-der">
@@ -92,10 +92,10 @@ export function Hero() {
       <Cabecera />
       <div className="hero-pie">
         <div>
-          <p className="hero-ciudad entra" style={{ '--i': 0 }}>Tucumán</p>
-          <h1 className="hero-titulo entra" style={{ '--i': 1 }}>Piaceres</h1>
+          <p className="hero-ciudad entra" style={{ '--i': 0 }}>Caribe mexicano</p>
+          <h1 className="hero-titulo entra" style={{ '--i': 1 }}>Piaceri <span>Argentini</span></h1>
           <p className="hero-bajada entra" style={{ '--i': 2 }}>
-            Parrilla a la leña, pastas de autor y una cocina vegetariana al mismo nivel que cualquier otro plato.
+            Parrilla argentina a la leña, pastas de autor y una cocina vegetariana al mismo nivel que cualquier otro plato. Frente al mar Caribe.
           </p>
           <div className="entra" style={{ '--i': 3 }}>
             <a className="btn btn-primario" href={wa('Hola, quiero reservar una mesa.')} target="_blank" rel="noopener noreferrer">
@@ -112,7 +112,7 @@ export function Hero() {
   );
 }
 
-export function HeroPagina({ ciudad = 'Piaceres', titulo, img = HERO_IMG }) {
+export function HeroPagina({ ciudad = 'Piaceri Argentini', titulo, img = HERO_IMG }) {
   return (
     <section className="hero hero-compacto ancho" onPointerMove={mover} onPointerLeave={salir}>
       <Capas img={img} />

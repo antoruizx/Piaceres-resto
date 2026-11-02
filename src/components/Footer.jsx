@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
-import { Flecha, Monograma } from './Base.jsx';
+import { Flecha, LogoTexto, Monograma } from './Base.jsx';
 import { NAV } from './Hero.jsx';
-import { DIRECCION, EMAIL, INSTAGRAM, TELEFONO, wa } from '../config.js';
+import { CIUDAD, DIRECCION, EMAIL, INSTAGRAM, TELEFONO, wa } from '../config.js';
 
 export default function Footer() {
   return (
@@ -9,8 +9,8 @@ export default function Footer() {
       <div className="footer-in">
         <div className="footer-top">
           <div className="footer-marca">
-            <Link to="/" className="logo" aria-label="Piaceres, ir al inicio"><Monograma /><span className="logo-txt">PIACERES</span></Link>
-            <p>Parrilla a la leña, pastas de autor y cocina vegetariana. Seis casas en Tucumán.</p>
+            <Link to="/" className="logo" aria-label="Piaceri Argentini, ir al inicio"><Monograma /><LogoTexto /></Link>
+            <p>Parrilla argentina a la leña, pastas de autor y cocina vegetariana. Seis casas en el Caribe mexicano.</p>
           </div>
           <nav aria-label="Pie de página">
             <h2>Navegación</h2>
@@ -24,7 +24,7 @@ export default function Footer() {
             <h2>Contacto</h2>
             <ul>
               <li><a href={wa()} target="_blank" rel="noopener noreferrer">WhatsApp {TELEFONO}</a></li>
-              <li>{DIRECCION}, San Miguel de Tucumán</li>
+              <li>{DIRECCION}, {CIUDAD}</li>
               <li>{INSTAGRAM ? <a href={INSTAGRAM} target="_blank" rel="noopener noreferrer">Instagram</a> : 'Instagram [INSTAGRAM]'}</li>
               <li>{EMAIL ? <a href={`mailto:${EMAIL}`}>{EMAIL}</a> : '[EMAIL]'}</li>
             </ul>
@@ -32,8 +32,8 @@ export default function Footer() {
           <div>
             <h2>Horarios</h2>
             <ul>
-              <li className="horario">Mediodía <Flecha w={24} /> 12 a 16 h</li>
-              <li className="horario">Noche <Flecha w={24} /> 20 a 00 h</li>
+              <li className="horario">Comida <Flecha w={24} /> 13 a 17 h</li>
+              <li className="horario">Cena <Flecha w={24} /> 19 a 23:30 h</li>
               <li className="horario">Todos los días</li>
             </ul>
             <div className="botones">
@@ -43,7 +43,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="footer-bajo">
-          <p>Piaceres Restaurante · San Miguel de Tucumán</p>
+          <p>Piaceri Argentini · Cocina argentina en el Caribe mexicano</p>
           <p>© 2026 Sitio oficial</p>
         </div>
       </div>

@@ -455,3 +455,9 @@ button.chip[aria-pressed="true"]{background:var(--espresso);color:var(--ivory);b
   .carta-barra .filtros .btn-veg{padding:0 10px;font-size:11px;letter-spacing:.08em}
   .carta-barra .filtros .btn-veg::before{display:none}
 }
+
+/* ===== Marca Piaceri Argentini ===== */
+.logo-txt{display:inline-flex;flex-direction:column;align-items:center;line-height:1;font-size:21px;letter-spacing:.32em;margin-right:-.32em}
+.logo-txt small{font-family:var(--sans);font-size:9.5px;font-weight:400;letter-spacing:.62em;margin:7px -.62em 0 0;color:#A9CDEB}
+.hero-titulo span{color:#BFDDF5}
+@media (max-width:860px){.logo-txt{font-size:18px}.logo-txt small{font-size:8.5px}}
