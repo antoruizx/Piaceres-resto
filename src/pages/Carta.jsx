@@ -2,13 +2,21 @@ import { useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import menu from '../data/menu.json';
 import { HeroPagina } from '../components/Hero.jsx';
-import { BotonVeg, ListaPlatos } from '../components/CartaLibro.jsx';
+import { FILTROS, Filtros, ListaPlatos } from '../components/CartaLibro.jsx';
+
+// Los filtros viven en la URL (?veg=1&vegano=1&sintacc=1) para poder compartir el link.
+const PARAM = { veg: 'veg', vegano: 'vegano', sinTacc: 'sintacc' };
 
 export default function Carta() {
   const [params, setParams] = useSearchParams();
-  const soloVeg = params.get('veg') === '1';
+  const filtros = Object.fromEntries(FILTROS.map(([k]) => [k, params.get(PARAM[k]) === '1']));
   useEffect(() => { document.title = 'La carta · Piaceres'; }, []);
-  const alternar = () => setParams(soloVeg ? {} : { veg: '1' }, { replace: true });
+  const cambiar = (k) =>
+    setParams((prev) => {
+      const sig = new URLSearchParams(prev);
+      if (sig.get(PARAM[k]) === '1') sig.delete(PARAM[k]); else sig.set(PARAM[k], '1');
+      return sig;
+    }, { replace: true });
 
   return (
     <>
@@ -19,7 +27,7 @@ export default function Carta() {
             <nav className="tabs" aria-label="Secciones de la carta">
               {menu.secciones.map((s) => <a key={s.id} href={`#${s.id}`}>{s.titulo}</a>)}
             </nav>
-            <BotonVeg activo={soloVeg} onClick={alternar} />
+            <Filtros valor={filtros} onCambio={cambiar} />
           </div>
         </div>
         <div className="seccion">
@@ -30,7 +38,7 @@ export default function Carta() {
                   <h2 className="titulo" id={`t-${s.id}`}>{s.titulo}</h2>
                   <span className="nota">{s.nota}</span>
                 </div>
-                <ListaPlatos seccion={s} soloVeg={soloVeg} />
+                <ListaPlatos seccion={s} filtros={filtros} />
               </section>
             ))}
           </div>

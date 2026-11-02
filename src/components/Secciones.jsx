@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import menu from '../data/menu.json';
 import { Etiqueta, Flecha, FlechaIzq, Foto, ListaNum } from './Base.jsx';
 import { wa } from '../config.js';
+import { Etiquetas } from './CartaLibro.jsx';
 
 const plato = (id) => menu.secciones.flatMap((s) => s.items).find((i) => i.id === id);
 
@@ -33,7 +34,7 @@ export function Restaurante() {
               'Parrilla, pastas y huerta',
               'Mediodía y noche, todos los días',
               'Entrada de cortesía de la casa',
-              'Carta vegetariana completa',
+              'Opciones vegetarianas, veganas y sin TACC',
               'Delivery propio en seis zonas',
               'Vinos argentinos por copa',
             ]}
@@ -129,7 +130,7 @@ export function Recomendaciones() {
               <li className="tarjeta" key={id}>
                 <div className="tarjeta-foto zoom">
                   <Foto nombre={p.img} alt={ALT[id]} sizes="(max-width: 760px) 84vw, (max-width: 1080px) 46vw, 380px" />
-                  {p.veg && <span className="tag">Vegetariano</span>}
+                  {(p.veg || p.sinTacc) && <span className="tags-foto"><Etiquetas item={p} /></span>}
                 </div>
                 <h3>{p.nombre}</h3>
                 <p>{p.desc}</p>
@@ -165,7 +166,7 @@ export function Antipasti() {
                 <div>
                   <h3>{p.nombre.replace(' confitado', '')}</h3>
                   <p>{p.desc}</p>
-                  {p.veg && <span className="tag" style={{ marginTop: 8 }}>Vegetariano</span>}
+                  {(p.veg || p.sinTacc) && <span className="tags"><Etiquetas item={p} /></span>}
                 </div>
               </li>
             );

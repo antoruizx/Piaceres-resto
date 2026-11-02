@@ -430,3 +430,28 @@ button.chip[aria-pressed="true"]{background:var(--espresso);color:var(--ivory);b
   .comparacion{grid-template-columns:1fr}
   .comparacion > div + div{border-left:0;border-top:1px solid var(--line)}
 }
+
+/* ===== Filtros de dieta (vegetariano, vegano, sin TACC) ===== */
+.filtros{display:flex;flex-wrap:wrap;gap:8px}
+.filtros .btn-veg{padding:0 14px;min-height:44px;font-size:12px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.tags-foto{position:absolute;left:14px;top:14px;display:flex;flex-wrap:wrap;gap:6px}
+.tarjeta-foto .tags-foto .tag{position:static}
+.tag-vegano{border-color:var(--vino-3);color:var(--vino-3)}
+.tag-sintacc{background:var(--cream-2)}
+.aviso-filtro{font-size:14px;color:var(--stone);padding-top:16px}
+.carta-barra-in{flex-wrap:wrap}
+@media (max-width:760px){
+  .carta-barra .filtros{width:100%}
+  .pag-izq-pie .filtros{width:100%}
+}
+@media (max-width:760px){
+  .carta-barra .filtros{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}
+  .carta-barra .filtros::-webkit-scrollbar{display:none}
+  .carta-barra .filtros .btn-veg{padding:0 10px;flex:none;gap:8px}
+  .carta-barra-in{gap:4px}
+}
+@media (max-width:760px){
+  .carta-barra .filtros .btn-veg{padding:0 10px;font-size:11px;letter-spacing:.08em}
+  .carta-barra .filtros .btn-veg::before{display:none}
+}

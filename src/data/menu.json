@@ -12,7 +12,9 @@
           "desc": "Tibia, con manteca de hierbas y aceite de oliva.",
           "veg": true,
           "cortesia": true,
-          "precio": 0
+          "precio": 0,
+          "vegano": false,
+          "sinTacc": false
         },
         {
           "id": "tostadas-crudo",
@@ -20,7 +22,9 @@
           "desc": "Masa madre, crudo estacionado, pera y queso crema.",
           "veg": false,
           "precio": 14500,
-          "img": "tostadas-crudo"
+          "img": "tostadas-crudo",
+          "vegano": false,
+          "sinTacc": false
         },
         {
           "id": "bruschettas",
@@ -28,7 +32,9 @@
           "desc": "Cherry asados, ricota de campo y albahaca.",
           "veg": true,
           "precio": 11900,
-          "img": "bruschettas"
+          "img": "bruschettas",
+          "vegano": false,
+          "sinTacc": false
         },
         {
           "id": "hongos",
@@ -36,7 +42,9 @@
           "desc": "Champiñones gratinados con queso crema y hierbas.",
           "veg": true,
           "precio": 12500,
-          "img": "hongos"
+          "img": "hongos",
+          "vegano": false,
+          "sinTacc": true
         },
         {
           "id": "rosas-papa",
@@ -44,7 +52,9 @@
           "desc": "Láminas crocantes con alioli de ajo asado.",
           "veg": true,
           "precio": 10900,
-          "img": "rosas-papa"
+          "img": "rosas-papa",
+          "vegano": false,
+          "sinTacc": true
         },
         {
           "id": "salmon",
@@ -52,7 +62,18 @@
           "desc": "Queso crema, rúcula y reducción de aceto.",
           "veg": false,
           "precio": 16900,
-          "img": "salmon"
+          "img": "salmon",
+          "vegano": false,
+          "sinTacc": false
+        },
+        {
+          "vegano": true,
+          "sinTacc": true,
+          "id": "escalivada",
+          "nombre": "Escalivada a la leña",
+          "desc": "Morrones, berenjena y cebolla asados, aceite de oliva y almendras.",
+          "veg": true,
+          "precio": 13500
         }
       ]
     },
@@ -68,28 +89,54 @@
           "desc": "Ricota y nuez, tomates cherry confitados y albahaca.",
           "veg": true,
           "precio": 21500,
-          "img": "tortelli"
+          "img": "tortelli",
+          "vegano": false,
+          "sinTacc": false
         },
         {
           "id": "sorrentinos",
           "nombre": "Sorrentinos de calabaza asada",
           "desc": "Queso de cabra, nueces y manteca de salvia.",
           "veg": true,
-          "precio": 19900
+          "precio": 19900,
+          "vegano": false,
+          "sinTacc": false
         },
         {
           "id": "pappardelle",
           "nombre": "Pappardelle al ragú de osobuco",
           "desc": "Cocción lenta al malbec y gremolata.",
           "veg": false,
-          "precio": 24500
+          "precio": 24500,
+          "vegano": false,
+          "sinTacc": false
         },
         {
           "id": "noquis",
           "nombre": "Ñoquis de papa",
           "desc": "Hongos de estación y crema de parmesano.",
           "veg": true,
-          "precio": 18500
+          "precio": 18500,
+          "vegano": false,
+          "sinTacc": false
+        },
+        {
+          "vegano": false,
+          "sinTacc": true,
+          "id": "noquis-sin-tacc",
+          "nombre": "Ñoquis de papa sin TACC",
+          "desc": "Harina de arroz, pomodoro y albahaca. Cocción en agua aparte.",
+          "veg": true,
+          "precio": 19500
+        },
+        {
+          "vegano": true,
+          "sinTacc": true,
+          "id": "spaghetti-lentejas",
+          "nombre": "Spaghetti de lentejas",
+          "desc": "Pomodoro asado, aceitunas negras y alcaparras.",
+          "veg": true,
+          "precio": 19500
         }
       ]
     },
@@ -104,7 +151,9 @@
           "nombre": "Ojo de bife",
           "desc": "Papas rústicas al romero y chimichurri de hierbas.",
           "veg": false,
-          "precio": 38900
+          "precio": 38900,
+          "vegano": false,
+          "sinTacc": true
         },
         {
           "id": "lomo",
@@ -112,21 +161,27 @@
           "desc": "Puré de papas rústico y tomates asados.",
           "veg": false,
           "precio": 36500,
-          "img": "medallon-lomo"
+          "img": "medallon-lomo",
+          "vegano": false,
+          "sinTacc": true
         },
         {
           "id": "entrana",
           "nombre": "Entraña",
           "desc": "Criolla de pimientos asados y sal de Maras.",
           "veg": false,
-          "precio": 34900
+          "precio": 34900,
+          "vegano": false,
+          "sinTacc": true
         },
         {
           "id": "bondiola",
           "nombre": "Bondiola braseada",
           "desc": "Glaseado de miel y mostaza, puré de batata.",
           "veg": false,
-          "precio": 27900
+          "precio": 27900,
+          "vegano": false,
+          "sinTacc": false
         }
       ]
     },
@@ -142,7 +197,9 @@
           "desc": "Labneh, miel de tomillo y dukkah de avellanas.",
           "veg": true,
           "precio": 15900,
-          "img": "zanahorias"
+          "img": "zanahorias",
+          "vegano": false,
+          "sinTacc": true
         },
         {
           "id": "coles",
@@ -150,21 +207,36 @@
           "desc": "Glaseado de malta, nueces y hierbas frescas.",
           "veg": true,
           "precio": 14900,
-          "img": "coles"
+          "img": "coles",
+          "vegano": false,
+          "sinTacc": false
         },
         {
           "id": "berenjena",
           "nombre": "Berenjena asada al miso",
           "desc": "Sésamo tostado, yogur y hojas verdes.",
           "veg": true,
-          "precio": 17500
+          "precio": 17500,
+          "vegano": false,
+          "sinTacc": false
         },
         {
           "id": "risotto",
           "nombre": "Risotto de hongos",
           "desc": "Hongos de pino, parmesano y aceite de trufa.",
           "veg": true,
-          "precio": 23900
+          "precio": 23900,
+          "vegano": false,
+          "sinTacc": true
+        },
+        {
+          "vegano": true,
+          "sinTacc": true,
+          "id": "coliflor",
+          "nombre": "Coliflor asada entera",
+          "desc": "Tahini, granada y pistachos tostados.",
+          "veg": true,
+          "precio": 17900
         }
       ]
     },
@@ -179,7 +251,9 @@
           "nombre": "Tiramisú de la casa",
           "desc": "Mascarpone, café de especialidad y cacao.",
           "veg": true,
-          "precio": 9900
+          "precio": 9900,
+          "vegano": false,
+          "sinTacc": false
         },
         {
           "id": "volcan",
@@ -187,7 +261,9 @@
           "desc": "Con helado de crema y frutillas.",
           "veg": true,
           "precio": 10900,
-          "img": "volcan"
+          "img": "volcan",
+          "vegano": false,
+          "sinTacc": false
         },
         {
           "id": "peras-malbec",
@@ -195,7 +271,18 @@
           "desc": "Crema de vainilla y nueces caramelizadas.",
           "veg": true,
           "precio": 9500,
-          "img": "peras"
+          "img": "peras",
+          "vegano": false,
+          "sinTacc": true
+        },
+        {
+          "vegano": true,
+          "sinTacc": true,
+          "id": "mousse-vegana",
+          "nombre": "Mousse de chocolate amargo",
+          "desc": "Leche de coco, cacao 70% y sal de Maras.",
+          "veg": true,
+          "precio": 9900
         }
       ]
     },

@@ -4,13 +4,37 @@ import { Etiqueta, Monograma } from './Base.jsx';
 import { precioTxt } from '../config.js';
 
 export const VACIO_VEG = 'Esta sección no tiene platos vegetarianos. Te esperamos en Huerta, Pastas y Antipasti.';
+const VACIO_FILTROS = 'Esta sección no tiene platos con los filtros elegidos. Probá en Huerta, Antipasti o Dolci.';
 
-// Aplica el filtro "Solo vegetariano" (solo afecta a las secciones de comida).
-export const filtrar = (sec, soloVeg) => (soloVeg && sec.comida ? sec.items.filter((i) => i.veg) : sec.items);
+// Filtros de dieta: se combinan entre sí (ej. vegano + sin TACC).
+export const FILTROS = [
+  ['veg', 'Vegetariano'],
+  ['vegano', 'Vegano'],
+  ['sinTacc', 'Sin TACC'],
+];
+export const SIN_FILTROS = { veg: false, vegano: false, sinTacc: false };
+const hayFiltro = (f) => FILTROS.some(([k]) => f[k]);
 
-export function ListaPlatos({ seccion, soloVeg }) {
-  const items = filtrar(seccion, soloVeg);
-  if (!items.length) return <p className="vacio">{VACIO_VEG}</p>;
+// Los filtros solo afectan a las secciones de comida (no a vinos ni tragos).
+export const filtrar = (sec, f) =>
+  sec.comida ? sec.items.filter((i) => FILTROS.every(([k]) => !f[k] || i[k])) : sec.items;
+
+// Etiquetas de dieta de un plato o producto. "Vegano" reemplaza a "Vegetariano".
+export function Etiquetas({ item }) {
+  return (
+    <>
+      {item.vegano ? <span className="tag tag-vegano">Vegano</span> : item.veg && <span className="tag">Vegetariano</span>}
+      {item.sinTacc && <span className="tag tag-sintacc">Sin TACC</span>}
+    </>
+  );
+}
+
+export function ListaPlatos({ seccion, filtros }) {
+  const items = filtrar(seccion, filtros);
+  if (!items.length) {
+    const soloVeg = filtros.veg && !filtros.vegano && !filtros.sinTacc;
+    return <p className="vacio">{soloVeg ? VACIO_VEG : VACIO_FILTROS}</p>;
+  }
   return (
     <ul className="platos">
       {items.map((p) => {
@@ -19,7 +43,7 @@ export function ListaPlatos({ seccion, soloVeg }) {
           <li key={p.id}>
             <h4 className="plato-nombre">
               {p.nombre}
-              {p.veg && seccion.comida && <span className="tag">Vegetariano</span>}
+              {seccion.comida && <Etiquetas item={p} />}
               {p.cortesia && <span className="tag tag-cortesia">Cortesía</span>}
             </h4>
             <p className="plato-desc">{p.desc}</p>
@@ -31,18 +55,22 @@ export function ListaPlatos({ seccion, soloVeg }) {
   );
 }
 
-export function BotonVeg({ activo, onClick }) {
+export function Filtros({ valor, onCambio }) {
   return (
-    <button type="button" className="btn-veg" aria-pressed={activo} onClick={onClick}>
-      Solo vegetariano
-    </button>
+    <div className="filtros" role="group" aria-label="Filtrar la carta">
+      {FILTROS.map(([k, t]) => (
+        <button key={k} type="button" className="btn-veg" aria-pressed={valor[k]} onClick={() => onCambio(k)}>
+          {t}
+        </button>
+      ))}
+    </div>
   );
 }
 
 export default function CartaLibro() {
   const [abierto, setAbierto] = useState(false);
   const [activa, setActiva] = useState(menu.secciones[0].id);
-  const [soloVeg, setSoloVeg] = useState(false);
+  const [filtros, setFiltros] = useState(SIN_FILTROS);
   const tapaRef = useRef(null);
   const libroRef = useRef(null);
   const tituloRef = useRef(null);
@@ -100,7 +128,7 @@ export default function CartaLibro() {
                 ))}
               </ol>
               <div className="pag-izq-pie">
-                <BotonVeg activo={soloVeg} onClick={() => setSoloVeg(!soloVeg)} />
+                <Filtros valor={filtros} onCambio={(k) => setFiltros((f) => ({ ...f, [k]: !f[k] }))} />
                 <button type="button" className="link-linea" onClick={cerrar}>Cerrar la carta</button>
               </div>
             </div>
@@ -111,7 +139,8 @@ export default function CartaLibro() {
                 <span className="nota">{seccion.nota}</span>
               </div>
               <div aria-live="polite">
-                <ListaPlatos seccion={seccion} soloVeg={soloVeg} />
+                {hayFiltro(filtros) && !seccion.comida && <p className="aviso-filtro">Los filtros aplican solo a la comida.</p>}
+                <ListaPlatos seccion={seccion} filtros={filtros} />
               </div>
             </div>
           </div>

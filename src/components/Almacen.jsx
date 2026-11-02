@@ -2,6 +2,7 @@ import almacen from '../data/almacen.json';
 import menu from '../data/menu.json';
 import { Etiqueta, Flecha, Foto } from './Base.jsx';
 import { precioTxt, wa } from '../config.js';
+import { Etiquetas } from './CartaLibro.jsx';
 
 // Comparación mesa vs. para llevar, tomada de los datos (no hardcodeada).
 const enMesa = menu.secciones.flatMap((s) => s.items).find((i) => i.id === 'tortelli');
@@ -58,7 +59,10 @@ export default function Almacen() {
                     <div>
                       <p className="alm-nombre">
                         {i.nombre}
-                        {g.id === 'pastas' && i.veg && <span className="tag">Vegetariano</span>}
+                        {g.id === 'pastas' ? <Etiquetas item={i} /> : <>
+                          {i.vegano && <span className="tag tag-vegano">Vegano</span>}
+                          {i.sinTacc && <span className="tag tag-sintacc">Sin TACC</span>}
+                        </>}
                       </p>
                       <p className="alm-desc">{i.desc} · {i.presentacion}</p>
                     </div>
