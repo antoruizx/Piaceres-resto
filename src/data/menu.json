@@ -153,6 +153,19 @@
           "popular": false,
           "nuevo": true,
           "img": "ensalada-cesar"
+        },
+        {
+          "id": "prueba-pago",
+          "nombre": "Producto de prueba",
+          "desc": "Solo para probar el pago. No aparece en la carta.",
+          "veg": false,
+          "vegano": false,
+          "sinTacc": false,
+          "precio": 1,
+          "min": 5,
+          "popular": false,
+          "nuevo": false,
+          "oculto": true
         }
       ]
     },

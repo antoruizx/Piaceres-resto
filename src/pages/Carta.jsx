@@ -78,7 +78,8 @@ export default function Carta() {
       (!tipos.promo || descuentoPara(i, promosHoy) > 0) &&
       (!tipos.popular || i.popular) &&
       (!tipos.nuevo || i.nuevo);
-    const conSeccion = (s) => s.items.map((i) => ({ ...i, seccion: s.id }));
+    // Los productos "ocultos" (ej. el de prueba de $1) solo se abren con su link directo.
+    const conSeccion = (s) => s.items.filter((i) => !i.oculto).map((i) => ({ ...i, seccion: s.id }));
 
     if (cat === 'para-vos' && !busqueda) {
       const todos = catalogo.secciones.flatMap((s) => conSeccion(s).filter((i) => pasa(i, s)));
