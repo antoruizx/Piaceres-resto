@@ -24,11 +24,15 @@ export function Logo({ compacto = false }) {
 }
 
 const ANCHOS = [480, 960, 1600];
+// Encuadre por foto cuando el plato no está en el centro (ej. foto vertical con el plato abajo).
+const ENCUADRE = { panqueques: 'center 80%' };
+
 export function Foto({ nombre, alt, sizes = '(max-width: 760px) 50vw, 25vw', eager = false, className = '' }) {
   if (!nombre) return <span className={`foto-vacia ${className}`} aria-hidden="true" />;
   return (
     <img
       className={className}
+      style={ENCUADRE[nombre] ? { objectPosition: ENCUADRE[nombre] } : undefined}
       src={`/img/${nombre}-960.webp`}
       srcSet={ANCHOS.map((w) => `/img/${nombre}-${w}.webp ${w}w`).join(', ')}
       sizes={sizes}

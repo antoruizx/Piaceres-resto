@@ -151,7 +151,8 @@
           "sinTacc": false,
           "min": 25,
           "popular": false,
-          "nuevo": false
+          "nuevo": false,
+          "img": "sorrentinos"
         },
         {
           "id": "pappardelle",
@@ -163,7 +164,8 @@
           "sinTacc": false,
           "min": 25,
           "popular": false,
-          "nuevo": false
+          "nuevo": false,
+          "img": "pappardelle"
         },
         {
           "id": "noquis",
@@ -175,7 +177,8 @@
           "sinTacc": false,
           "min": 25,
           "popular": false,
-          "nuevo": false
+          "nuevo": false,
+          "img": "noquis-hongos"
         },
         {
           "vegano": false,
@@ -219,7 +222,8 @@
           "sinTacc": true,
           "min": 35,
           "popular": true,
-          "nuevo": false
+          "nuevo": false,
+          "img": "ojo-bife"
         },
         {
           "id": "lomo",
@@ -326,7 +330,8 @@
           "sinTacc": true,
           "min": 25,
           "popular": true,
-          "nuevo": false
+          "nuevo": false,
+          "img": "risotto"
         },
         {
           "vegano": true,
@@ -344,7 +349,7 @@
     },
     {
       "id": "dolci",
-      "titulo": "Dolci",
+      "titulo": "Postres",
       "nota": "para cerrar",
       "comida": true,
       "items": [
@@ -358,7 +363,8 @@
           "sinTacc": false,
           "min": 10,
           "popular": false,
-          "nuevo": false
+          "nuevo": false,
+          "img": "tiramisu"
         },
         {
           "id": "volcan",
@@ -396,7 +402,8 @@
           "precio": 9900,
           "min": 10,
           "popular": false,
-          "nuevo": true
+          "nuevo": true,
+          "img": "mousse"
         },
         {
           "id": "panqueques",
@@ -408,7 +415,8 @@
           "precio": 8900,
           "min": 10,
           "popular": false,
-          "nuevo": false
+          "nuevo": false,
+          "img": "panqueques"
         }
       ]
     },

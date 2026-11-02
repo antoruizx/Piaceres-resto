@@ -13,7 +13,8 @@
           "precio": 9800,
           "veg": true,
           "vegano": false,
-          "sinTacc": false
+          "sinTacc": false,
+          "img": "tortelli"
         },
         {
           "id": "sorrentinos-casa",
@@ -23,7 +24,8 @@
           "precio": 9500,
           "veg": true,
           "vegano": false,
-          "sinTacc": false
+          "sinTacc": false,
+          "img": "sorrentinos"
         },
         {
           "id": "ravioles-casa",
@@ -53,7 +55,8 @@
           "precio": 5900,
           "veg": true,
           "vegano": false,
-          "sinTacc": false
+          "sinTacc": false,
+          "img": "noquis"
         },
         {
           "id": "tallarines-casa",
@@ -73,7 +76,8 @@
           "precio": 5500,
           "veg": true,
           "vegano": false,
-          "sinTacc": false
+          "sinTacc": false,
+          "img": "pappardelle"
         },
         {
           "id": "noquis-sin-tacc-casa",
