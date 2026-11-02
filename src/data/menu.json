@@ -299,10 +299,10 @@
         {
           "id": "salmon-glaseado",
           "nombre": "Salmón glaseado",
-          "desc": "Salmón rosado a la leña con glaseado de soja y miel, puré de papas, espárragos y vegetales salteados.",
+          "desc": "Salmón rosado a la leña con glaseado de tamari (soja sin gluten) y miel, puré de papas, espárragos y vegetales salteados.",
           "veg": false,
           "vegano": false,
-          "sinTacc": false,
+          "sinTacc": true,
           "precio": 34900,
           "min": 30,
           "popular": false,
