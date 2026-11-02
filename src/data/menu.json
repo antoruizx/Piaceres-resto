@@ -1,0 +1,285 @@
+{
+  "secciones": [
+    {
+      "id": "antipasti",
+      "titulo": "Antipasti",
+      "nota": "para compartir",
+      "comida": true,
+      "items": [
+        {
+          "id": "focaccia",
+          "nombre": "Focaccia de la casa",
+          "desc": "Tibia, con manteca de hierbas y aceite de oliva.",
+          "veg": true,
+          "cortesia": true,
+          "precio": 0
+        },
+        {
+          "id": "tostadas-crudo",
+          "nombre": "Tostadas de jamón crudo",
+          "desc": "Masa madre, crudo estacionado, pera y queso crema.",
+          "veg": false,
+          "precio": null,
+          "img": "tostadas-crudo"
+        },
+        {
+          "id": "bruschettas",
+          "nombre": "Bruschettas de tomate confitado",
+          "desc": "Cherry asados, ricota de campo y albahaca.",
+          "veg": true,
+          "precio": null,
+          "img": "bruschettas"
+        },
+        {
+          "id": "hongos",
+          "nombre": "Hongos rellenos",
+          "desc": "Champiñones gratinados con queso crema y hierbas.",
+          "veg": true,
+          "precio": null,
+          "img": "hongos"
+        },
+        {
+          "id": "rosas-papa",
+          "nombre": "Rosas de papa",
+          "desc": "Láminas crocantes con alioli de ajo asado.",
+          "veg": true,
+          "precio": null,
+          "img": "rosas-papa"
+        },
+        {
+          "id": "salmon",
+          "nombre": "Tostadas de salmón ahumado",
+          "desc": "Queso crema, rúcula y reducción de aceto.",
+          "veg": false,
+          "precio": null,
+          "img": "salmon"
+        }
+      ]
+    },
+    {
+      "id": "pastas",
+      "titulo": "Pastas",
+      "nota": "frescas, cada mañana",
+      "comida": true,
+      "items": [
+        {
+          "id": "tortelli",
+          "nombre": "Tortelli al vino tinto",
+          "desc": "Ricota y nuez, tomates cherry confitados y albahaca.",
+          "veg": true,
+          "precio": null,
+          "img": "tortelli"
+        },
+        {
+          "id": "sorrentinos",
+          "nombre": "Sorrentinos de calabaza asada",
+          "desc": "Queso de cabra, nueces y manteca de salvia.",
+          "veg": true,
+          "precio": null
+        },
+        {
+          "id": "pappardelle",
+          "nombre": "Pappardelle al ragú de osobuco",
+          "desc": "Cocción lenta al malbec y gremolata.",
+          "veg": false,
+          "precio": null
+        },
+        {
+          "id": "noquis",
+          "nombre": "Ñoquis de papa",
+          "desc": "Hongos de estación y crema de parmesano.",
+          "veg": true,
+          "precio": null
+        }
+      ]
+    },
+    {
+      "id": "parrilla",
+      "titulo": "Parrilla",
+      "nota": "a la leña",
+      "comida": true,
+      "items": [
+        {
+          "id": "ojo-bife",
+          "nombre": "Ojo de bife",
+          "desc": "Papas rústicas al romero y chimichurri de hierbas.",
+          "veg": false,
+          "precio": null
+        },
+        {
+          "id": "lomo",
+          "nombre": "Medallón de lomo",
+          "desc": "Puré de papas rústico y tomates asados.",
+          "veg": false,
+          "precio": null,
+          "img": "medallon-lomo"
+        },
+        {
+          "id": "entrana",
+          "nombre": "Entraña",
+          "desc": "Criolla de pimientos asados y sal de Maras.",
+          "veg": false,
+          "precio": null
+        },
+        {
+          "id": "bondiola",
+          "nombre": "Bondiola braseada",
+          "desc": "Glaseado de miel y mostaza, puré de batata.",
+          "veg": false,
+          "precio": null
+        }
+      ]
+    },
+    {
+      "id": "huerta",
+      "titulo": "Huerta",
+      "nota": "cocina de Sofía",
+      "comida": true,
+      "items": [
+        {
+          "id": "zanahorias",
+          "nombre": "Zanahorias glaseadas",
+          "desc": "Labneh, miel de tomillo y dukkah de avellanas.",
+          "veg": true,
+          "precio": null,
+          "img": "zanahorias"
+        },
+        {
+          "id": "coles",
+          "nombre": "Coles de Bruselas caramelizadas",
+          "desc": "Glaseado de malta, nueces y hierbas frescas.",
+          "veg": true,
+          "precio": null,
+          "img": "coles"
+        },
+        {
+          "id": "berenjena",
+          "nombre": "Berenjena asada al miso",
+          "desc": "Sésamo tostado, yogur y hojas verdes.",
+          "veg": true,
+          "precio": null
+        },
+        {
+          "id": "risotto",
+          "nombre": "Risotto de hongos",
+          "desc": "Hongos de pino, parmesano y aceite de trufa.",
+          "veg": true,
+          "precio": null
+        }
+      ]
+    },
+    {
+      "id": "dolci",
+      "titulo": "Dolci",
+      "nota": "para cerrar",
+      "comida": true,
+      "items": [
+        {
+          "id": "tiramisu",
+          "nombre": "Tiramisú de la casa",
+          "desc": "Mascarpone, café de especialidad y cacao.",
+          "veg": true,
+          "precio": null
+        },
+        {
+          "id": "volcan",
+          "nombre": "Volcán de chocolate",
+          "desc": "Con helado de crema y frutillas.",
+          "veg": true,
+          "precio": null,
+          "img": "volcan"
+        },
+        {
+          "id": "peras-malbec",
+          "nombre": "Peras al malbec",
+          "desc": "Crema de vainilla y nueces caramelizadas.",
+          "veg": true,
+          "precio": null,
+          "img": "peras"
+        }
+      ]
+    },
+    {
+      "id": "vinos",
+      "titulo": "Vinos",
+      "nota": "por copa o botella",
+      "comida": false,
+      "items": [
+        {
+          "id": "malbec",
+          "nombre": "Malbec de altura",
+          "desc": "Valle de Uco, Mendoza",
+          "precio": null
+        },
+        {
+          "id": "cabfranc",
+          "nombre": "Cabernet Franc",
+          "desc": "Gualtallary, Mendoza",
+          "precio": null
+        },
+        {
+          "id": "pinot",
+          "nombre": "Pinot Noir",
+          "desc": "Patagonia",
+          "precio": null
+        },
+        {
+          "id": "torrontes",
+          "nombre": "Torrontés",
+          "desc": "Cafayate, Salta",
+          "precio": null
+        },
+        {
+          "id": "chardonnay",
+          "nombre": "Chardonnay",
+          "desc": "Tupungato, Mendoza",
+          "precio": null
+        },
+        {
+          "id": "espumante",
+          "nombre": "Espumante Brut Nature",
+          "desc": "Método tradicional",
+          "precio": null
+        }
+      ]
+    },
+    {
+      "id": "tragos",
+      "titulo": "Tragos",
+      "nota": "con y sin alcohol",
+      "comida": false,
+      "items": [
+        {
+          "id": "negroni",
+          "nombre": "Negroni de la casa",
+          "desc": "Gin, vermut rosso y bitter",
+          "precio": null
+        },
+        {
+          "id": "spritz",
+          "nombre": "Spritz de pomelo",
+          "desc": "Aperitivo, pomelo rosado y romero",
+          "precio": null
+        },
+        {
+          "id": "gintonic",
+          "nombre": "Gin tonic de pepino",
+          "desc": "Gin, tónica y pimienta rosa",
+          "precio": null
+        },
+        {
+          "id": "albahaca",
+          "nombre": "Albahaca y limón",
+          "desc": "Sin alcohol · limonada de albahaca y jengibre",
+          "precio": null
+        },
+        {
+          "id": "frutos-rojos",
+          "nombre": "Frutos rojos",
+          "desc": "Sin alcohol · frutos del bosque, tónica y menta",
+          "precio": null
+        }
+      ]
+    }
+  ]
+}
