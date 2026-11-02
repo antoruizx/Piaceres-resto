@@ -179,30 +179,6 @@
           "popular": false,
           "nuevo": false,
           "img": "noquis-hongos"
-        },
-        {
-          "vegano": false,
-          "sinTacc": true,
-          "id": "noquis-sin-tacc",
-          "nombre": "Ñoquis de papa sin TACC",
-          "desc": "Harina de arroz, pomodoro y albahaca. Cocción en agua aparte.",
-          "veg": true,
-          "precio": 19500,
-          "min": 25,
-          "popular": false,
-          "nuevo": false
-        },
-        {
-          "vegano": true,
-          "sinTacc": true,
-          "id": "spaghetti-lentejas",
-          "nombre": "Spaghetti de lentejas",
-          "desc": "Pomodoro asado, aceitunas negras y alcaparras.",
-          "veg": true,
-          "precio": 19500,
-          "min": 25,
-          "popular": false,
-          "nuevo": true
         }
       ]
     },
@@ -271,6 +247,18 @@
           "sinTacc": true,
           "precio": 29900,
           "min": 35,
+          "popular": false,
+          "nuevo": true
+        },
+        {
+          "id": "salchichas-veganas",
+          "nombre": "Salchichas parrilleras veganas con papas",
+          "desc": "A la leña, con papas rústicas al romero y chimichurri.",
+          "veg": true,
+          "vegano": true,
+          "sinTacc": false,
+          "precio": 18900,
+          "min": 30,
           "popular": false,
           "nuevo": true
         }
@@ -342,6 +330,18 @@
           "veg": true,
           "precio": 17900,
           "min": 25,
+          "popular": false,
+          "nuevo": true
+        },
+        {
+          "id": "wrap-sin-tacc",
+          "nombre": "Wrap sin TACC",
+          "desc": "Tortilla de harina de arroz, vegetales grillados, hummus y hojas verdes.",
+          "veg": true,
+          "vegano": true,
+          "sinTacc": true,
+          "precio": 14900,
+          "min": 15,
           "popular": false,
           "nuevo": true
         }
