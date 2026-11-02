@@ -202,7 +202,7 @@ select.campo{appearance:none;background-image:linear-gradient(45deg,transparent 
 .puntos{display:flex;justify-content:center;gap:6px;margin-top:10px}
 .puntos span{width:6px;height:6px;border-radius:999px;background:var(--surface-3);transition:width .3s,background .3s}
 .puntos span.activo{width:18px;background:var(--orange)}
-.categorias{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.categorias{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
 .categorias a{display:flex;flex-direction:column;align-items:center;gap:8px;padding:14px 4px;border-radius:var(--r);background:var(--surface);text-decoration:none;font-size:13px;font-weight:600;text-align:center}
 .categorias a:hover{background:var(--surface-2)}
 .categorias a span{width:48px;height:48px;border-radius:50%;background:var(--orange-soft);color:var(--orange);display:grid;place-items:center}
@@ -341,7 +341,7 @@ input[role="switch"]:checked::before{transform:translateX(20px)}
   .hero-foto{order:2;aspect-ratio:5/4}
   .inicio > .segmentado{max-width:480px}
   .promo{flex-basis:calc(50% - 6px)}
-  .categorias{grid-template-columns:repeat(8,1fr)}
+  .categorias{grid-template-columns:repeat(9,1fr)}
   .fila-scroll li{flex-basis:200px}
   .grilla-platos{grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
   .chips-scroll{margin:12px 0 0;padding:10px 0;top:69px}

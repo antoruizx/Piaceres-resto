@@ -123,6 +123,40 @@
       ]
     },
     {
+      "id": "livianos",
+      "titulo": "Livianos",
+      "nota": "para el mediodía",
+      "comida": true,
+      "items": [
+        {
+          "id": "focaccia-crudo",
+          "nombre": "Focaccia de crudo y stracciatella",
+          "desc": "Focaccia de masa madre, jamón crudo, stracciatella, pesto de albahaca y rúcula.",
+          "veg": false,
+          "vegano": false,
+          "sinTacc": false,
+          "precio": 15900,
+          "min": 15,
+          "popular": false,
+          "nuevo": true,
+          "img": "focaccia-crudo"
+        },
+        {
+          "id": "ensalada-cesar",
+          "nombre": "Ensalada César con pollo grillado",
+          "desc": "Lechuga romana, pollo a la parrilla, croutones, parmesano en lascas y aderezo César.",
+          "veg": false,
+          "vegano": false,
+          "sinTacc": false,
+          "precio": 16500,
+          "min": 15,
+          "popular": false,
+          "nuevo": true,
+          "img": "ensalada-cesar"
+        }
+      ]
+    },
+    {
       "id": "pastas",
       "titulo": "Pastas",
       "nota": "frescas, cada mañana",
@@ -261,6 +295,19 @@
           "min": 30,
           "popular": false,
           "nuevo": true
+        },
+        {
+          "id": "salmon-glaseado",
+          "nombre": "Salmón glaseado",
+          "desc": "Salmón rosado a la leña con glaseado de soja y miel, puré de papas, espárragos y vegetales salteados.",
+          "veg": false,
+          "vegano": false,
+          "sinTacc": false,
+          "precio": 34900,
+          "min": 30,
+          "popular": false,
+          "nuevo": true,
+          "img": "salmon-glaseado"
         }
       ]
     },

@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CakeSlice, ChefHat, Flame, GlassWater, Leaf, PartyPopper, Salad, ShoppingBasket, Soup, Wine } from 'lucide-react';
+import { ArrowRight, CakeSlice, ChefHat, Flame, GlassWater, Leaf, PartyPopper, Salad, Sandwich, ShoppingBasket, Soup, Wine } from 'lucide-react';
 import { Foto, IconosDieta, Logo } from '../components/ui.jsx';
 import { SelectorModo } from '../components/Layout.jsx';
 import { catalogo, usePedido } from '../state/Pedido.jsx';
@@ -8,6 +8,7 @@ import { HERO_IMG, MARCA, wa } from '../config.js';
 
 export const CATEGORIAS = [
   ['antipasti', 'Antipasti', Soup],
+  ['livianos', 'Livianos', Sandwich],
   ['pastas', 'Pastas', ChefHat],
   ['parrilla', 'Parrilla', Flame],
   ['huerta', 'Huerta', Salad],
