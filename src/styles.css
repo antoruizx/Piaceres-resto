@@ -38,10 +38,10 @@ ul,ol{margin:0;padding:0;list-style:none}
 .salto:focus{top:16px}
 
 /* ===== Marco y contenedores ===== */
-.marco{padding:12px;display:flex;flex-direction:column;gap:12px}
-.ancho{width:100%;max-width:1400px;margin:0 auto}
+.marco{display:flex;flex-direction:column}
+.ancho{width:100%}
 .contenido{background:var(--ivory)}
-.contenedor{max-width:1240px;margin:0 auto;padding:0 var(--gutter)}
+.contenedor{max-width:1440px;margin:0 auto;padding:0 var(--gutter)}
 .seccion{padding:clamp(64px, 9vw, 120px) 0}
 .seccion + .seccion{border-top:1px solid var(--line)}
 
@@ -147,7 +147,7 @@ button.chip[aria-pressed="true"]{background:var(--espresso);color:var(--ivory);b
 .btn-delivery:hover{transform:scale(1.05) rotate(-4deg);background:#C4AE9F}
 
 /* Hero del inicio: de borde a borde, sin el marco */
-.hero-full{margin:-12px -12px 0;width:calc(100% + 24px);max-width:none;min-height:max(640px, 100svh)}
+.hero-full{min-height:max(640px, 100svh)}
 .hero-full .barra > *{padding-left:clamp(20px,3vw,48px);padding-right:clamp(20px,3vw,48px)}
 .hero-full .hero-pie{padding-left:clamp(20px,5vw,80px);padding-right:clamp(20px,5vw,80px)}
 
@@ -257,7 +257,7 @@ button.chip[aria-pressed="true"]{background:var(--espresso);color:var(--ivory);b
 .ocasiones-sec{padding:clamp(72px,10vw,140px) 0}
 .depth{position:relative;isolation:isolate;color:var(--ivory);background:linear-gradient(145deg,#4A1238,#3A0D2E 45%,#24071C);
   box-shadow:0 2px 0 rgba(255,255,255,.06) inset,0 30px 60px -20px rgba(22,5,17,.75),0 60px 120px -40px rgba(46,10,36,.6);
-  animation:float 9s ease-in-out infinite;transition:transform .9s var(--ease),box-shadow .9s;max-width:1080px;margin:0 auto}
+  animation:float 9s ease-in-out infinite;transition:transform .9s var(--ease),box-shadow .9s;max-width:1240px;margin:0 auto}
 .depth::before{content:"";position:absolute;inset:14px -14px -14px 14px;border:1px solid rgba(177,153,137,.55);z-index:-1;transition:inset .9s}
 .depth:hover{animation-play-state:paused;transform:perspective(1000px) rotateY(-4deg) rotateX(2deg) translateY(-6px)}
 .depth:hover::before{inset:22px -22px -22px 22px}
