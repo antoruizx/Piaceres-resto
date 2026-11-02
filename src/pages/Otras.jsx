@@ -1,5 +1,5 @@
 // Páginas simples: historia, sucursales, resultado del pago, modo mesa (QR) y 404.
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Link, Navigate, useParams, useSearchParams } from 'react-router-dom';
 import { CheckCircle2, Clock, MapPin, XCircle } from 'lucide-react';
 import { Foto } from '../components/ui.jsx';
@@ -78,27 +78,78 @@ const RESULTADOS = {
   exito: [CheckCircle2, '¡Pago aprobado!', 'Recibimos tu pedido. La sucursal ya lo está preparando.'],
   pendiente: [Clock, 'Pago pendiente', 'Mercado Pago está procesando el pago. Te avisamos apenas se acredite.'],
   error: [XCircle, 'No se pudo completar el pago', 'No se hizo ningún cobro. Podés intentar de nuevo o pagar al recibir.'],
+  recibido: [CheckCircle2, '¡Pedido recibido!', 'Lo pagás al recibirlo o en la mesa. Avisale a la sucursal por WhatsApp para que lo confirme.'],
 };
+const ESTADO_PAGO = {
+  pendiente: 'Esperando el pago',
+  en_proceso: 'Pago en proceso',
+  aprobado: 'Pago aprobado',
+  rechazado: 'Pago rechazado',
+  cancelado: 'Pago cancelado',
+  devuelto: 'Pago devuelto',
+  revisar_monto: 'Pago en revisión',
+  a_cobrar: 'Se paga al recibir',
+};
+const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+
+/** Consulta el estado real del pedido en la base (lo actualiza el webhook de Mercado Pago). */
+function useEstadoPedido(id, seguir) {
+  const [pedido, setPedido] = useState(null);
+  useEffect(() => {
+    if (!UUID.test(id || '')) return;
+    let vivo = true, intentos = 0, t;
+    const consultar = async () => {
+      try {
+        const res = await fetch(`/api/pedidos?id=${id}`);
+        if (!res.ok) return;
+        const datos = await res.json();
+        if (!vivo) return;
+        setPedido(datos);
+        // Mientras el pago esté pendiente, volvemos a consultar (hasta ~1 minuto).
+        if (seguir && ['pendiente', 'en_proceso'].includes(datos.estado_pago) && ++intentos < 15) t = setTimeout(consultar, 4000);
+      } catch { /* sin base configurada: se muestra el resultado de la redirección */ }
+    };
+    consultar();
+    return () => { vivo = false; clearTimeout(t); };
+  }, [id, seguir]);
+  return pedido;
+}
 
 export function Resultado() {
   const { estado } = useParams();
   const [params] = useSearchParams();
   const p = usePedido();
-  const dato = RESULTADOS[estado];
-  const ok = estado === 'exito';
-  useEffect(() => { if (ok) p.vaciar(); }, [ok]); // eslint-disable-line react-hooks/exhaustive-deps
+  const ref = params.get('external_reference') || '';
+  const pedido = useEstadoPedido(ref, estado !== 'recibido');
+  // El estado guardado (webhook) manda sobre el de la redirección.
+  const real = pedido?.estado_pago === 'aprobado' ? 'exito'
+    : ['rechazado', 'cancelado'].includes(pedido?.estado_pago) ? 'error'
+    : estado;
+  const dato = RESULTADOS[real];
+  const listo = real === 'exito' || real === 'recibido';
+  useEffect(() => { if (listo) p.vaciar(); }, [listo]); // eslint-disable-line react-hooks/exhaustive-deps
   if (!dato) return <Navigate to="/" replace />;
   const [Icono, titulo, txt] = dato;
-  const ref = params.get('external_reference');
+  const mensaje = params.get('wa');
   return (
-    <div className={`pagina resultado resultado-${estado}`}>
+    <div className={`pagina resultado resultado-${real}`}>
       <Icono size={64} aria-hidden="true" />
       <h1>{titulo}</h1>
       <p>{txt}</p>
-      {ref && <p className="ayuda">Número de pedido: {ref.slice(0, 8).toUpperCase()}</p>}
+      {ref && <p className="numero-pedido">Pedido N° <strong>{ref.slice(0, 8).toUpperCase()}</strong></p>}
+      {pedido && (
+        <div className="resumen-pedido">
+          <p className="estado-pago">{ESTADO_PAGO[pedido.estado_pago] || pedido.estado_pago}</p>
+          <ul>{(pedido.items || []).map((i, n) => <li key={n}>{i.cantidad} × {i.nombre}</li>)}</ul>
+          <p><strong>Total {pesos(pedido.total)}</strong></p>
+        </div>
+      )}
       <div className="botones">
-        {ok ? <Link to="/" className="btn btn-primario">Volver al inicio</Link> : <Link to="/pedido" className="btn btn-primario">Volver al pedido</Link>}
-        <a href={wa('Hola, tengo una consulta sobre mi pedido.')} target="_blank" rel="noopener noreferrer" className="btn btn-sec">Escribinos</a>
+        {real === 'recibido' && mensaje && (
+          <a href={wa(mensaje)} target="_blank" rel="noopener noreferrer" className="btn btn-primario">Avisar por WhatsApp</a>
+        )}
+        {listo ? <Link to="/" className={`btn ${real === 'recibido' ? 'btn-sec' : 'btn-primario'}`}>Volver al inicio</Link> : <Link to="/pedido" className="btn btn-primario">Volver al pedido</Link>}
+        {real !== 'recibido' && <a href={wa(`Hola, tengo una consulta sobre mi pedido ${ref.slice(0, 8).toUpperCase()}.`)} target="_blank" rel="noopener noreferrer" className="btn btn-sec">Escribinos</a>}
       </div>
     </div>
   );

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Banknote, CreditCard, Loader2, MessageCircle } from 'lucide-react';
 import { SelectorModo } from '../components/Layout.jsx';
 import { sucursales, usePedido } from '../state/Pedido.jsx';
@@ -8,10 +8,12 @@ import { MARCA, wa } from '../config.js';
 
 const CLIENTE = 'piaceres-cliente';
 
-function mensajeWhatsApp(p, r, cliente, pago) {
+export const numeroCorto = (id) => (id ? id.slice(0, 8).toUpperCase() : '');
+
+function mensajeWhatsApp(p, r, cliente, pago, pedidoId = '') {
   const lineas = r.detalle.map((d) => `• ${d.cantidad} x ${d.nombre}${d.nota ? ` (${d.nota})` : ''} — ${pesos(d.total)}`);
   return [
-    `Hola! Quiero hacer un pedido (${MODOS[p.modo]} · ${r.sucursal.nombre}${p.modo === 'salon' && p.mesa ? ` · Mesa ${p.mesa}` : ''}):`,
+    `Hola! Quiero hacer un pedido${pedidoId ? ` (N° ${numeroCorto(pedidoId)})` : ''} — ${MODOS[p.modo]} · ${r.sucursal.nombre}${p.modo === 'salon' && p.mesa ? ` · Mesa ${p.mesa}` : ''}:`,
     ...lineas,
     r.descuento ? `Descuento del día: - ${pesos(r.descuento)}` : null,
     p.modo === 'delivery' ? `Envío: ${r.envio ? pesos(r.envio) : 'sin cargo'}` : null,
@@ -25,6 +27,7 @@ function mensajeWhatsApp(p, r, cliente, pago) {
 
 export default function Checkout() {
   const p = usePedido();
+  const navegar = useNavigate();
   const r = p.resumen;
   const [cliente, setCliente] = useState(() => {
     try { return JSON.parse(localStorage.getItem(CLIENTE)) || { nombre: '', telefono: '', direccion: '' }; } catch { return { nombre: '', telefono: '', direccion: '' }; }
@@ -55,8 +58,30 @@ export default function Checkout() {
     if (p.modo === 'delivery' && !cliente.direccion.trim()) return setError('Completá la dirección de entrega.');
     if (p.modo === 'salon' && !p.mesa.trim()) return setError('Indicá el número de mesa.');
 
+    const cuerpo = JSON.stringify({
+      items: p.lineas,
+      modo: p.modo,
+      sucursal: p.sucursal,
+      mesa: p.mesa,
+      propinaPct: p.propinaPct,
+      cliente,
+    });
+
     if (metodo === 'efectivo') {
-      window.open(wa(mensajeWhatsApp(p, r, cliente, efectivoTxt)), '_blank', 'noopener');
+      setEnviando(true);
+      let numero = '';
+      let rechazo = '';
+      try {
+        const res = await fetch('/api/pedidos', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: cuerpo });
+        const datos = await res.json().catch(() => ({}));
+        if (res.ok && datos.pedidoId) numero = datos.pedidoId;
+        else if (res.status === 400) rechazo = datos.error || 'Revisá los datos del pedido.';
+      } catch {
+        // Sin conexión con la base (o todavía no configurada): seguimos solo con WhatsApp.
+      }
+      if (rechazo) { setError(rechazo); setEnviando(false); return; }
+      const mensaje = mensajeWhatsApp(p, r, cliente, efectivoTxt, numero);
+      navegar(`/pedido/recibido?${new URLSearchParams({ ...(numero && { external_reference: numero }), wa: mensaje })}`);
       return;
     }
     setEnviando(true);
@@ -64,14 +89,7 @@ export default function Checkout() {
       const res = await fetch('/api/crear-preferencia', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          items: p.lineas,
-          modo: p.modo,
-          sucursal: p.sucursal,
-          mesa: p.mesa,
-          propinaPct: p.propinaPct,
-          cliente,
-        }),
+        body: cuerpo,
       });
       const datos = await res.json().catch(() => ({}));
       if (!res.ok || !datos.init_point) throw new Error(datos.error || 'El pago online no está disponible en este momento.');
@@ -130,7 +148,7 @@ export default function Checkout() {
           <button type="button" className="chip chip-grande" aria-pressed={metodo === 'mp'} onClick={() => setMetodo('mp')}><CreditCard size={18} aria-hidden="true" /> Mercado Pago</button>
           <button type="button" className="chip chip-grande" aria-pressed={metodo === 'efectivo'} onClick={() => setMetodo('efectivo')}><Banknote size={18} aria-hidden="true" /> {efectivoTxt}</button>
         </div>
-        {metodo === 'efectivo' && <p className="ayuda">Te abrimos WhatsApp con el pedido armado para que lo confirmes con la sucursal.</p>}
+        {metodo === 'efectivo' && <p className="ayuda">Registramos tu pedido y te damos un número; después podés avisarle a la sucursal por WhatsApp.</p>}
       </section>
 
       <section className="bloque">
