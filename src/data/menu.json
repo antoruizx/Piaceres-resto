@@ -334,16 +334,17 @@
           "nuevo": true
         },
         {
-          "id": "wrap-sin-tacc",
-          "nombre": "Wrap sin TACC",
-          "desc": "Tortilla de harina de arroz, vegetales grillados, hummus y hojas verdes.",
+          "id": "rollitos-berenjena",
+          "nombre": "Rollitos de berenjena",
+          "desc": "Rellenos de ricota, espinaca y queso azul, con tomates cherry confitados.",
           "veg": true,
-          "vegano": true,
+          "vegano": false,
           "sinTacc": true,
-          "precio": 14900,
-          "min": 15,
+          "precio": 16900,
+          "min": 25,
           "popular": false,
-          "nuevo": true
+          "nuevo": true,
+          "img": "rollitos-berenjena"
         }
       ]
     },
