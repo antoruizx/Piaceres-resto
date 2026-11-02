@@ -1,7 +1,8 @@
 [
-  { "id": "centro", "nombre": "Centro", "direccion": "24 de Septiembre 755, San Miguel de Tucumán", "lat": -26.8299, "lng": -65.2075, "horario": "12 a 16 h y 20 a 00 h", "deliveryMin": null, "envioGratisDesde": null },
-  { "id": "barrio-norte", "nombre": "Barrio Norte", "direccion": null, "lat": null, "lng": null, "horario": "12 a 16 h y 20 a 00 h", "deliveryMin": null, "envioGratisDesde": null },
-  { "id": "yerba-buena", "nombre": "Yerba Buena", "direccion": null, "lat": null, "lng": null, "horario": "12 a 16 h y 20 a 00 h", "deliveryMin": null, "envioGratisDesde": null },
-  { "id": "tafi-viejo", "nombre": "Tafí Viejo", "direccion": null, "lat": null, "lng": null, "horario": "12 a 16 h y 20 a 00 h", "deliveryMin": null, "envioGratisDesde": null },
-  { "id": "banda-rio-sali", "nombre": "Banda del Río Salí", "direccion": null, "lat": null, "lng": null, "horario": "12 a 16 h y 20 a 00 h", "deliveryMin": null, "envioGratisDesde": null }
+  {"id": "centro", "nombre": "Centro", "direccion": "24 de Septiembre 755, San Miguel de Tucumán", "lat": -26.8299, "lng": -65.2075, "horario": "12 a 16 h y 20 a 00 h", "deliveryMin": null, "envioGratisDesde": null},
+  {"id": "barrio-norte", "nombre": "Barrio Norte", "direccion": null, "lat": null, "lng": null, "horario": "12 a 16 h y 20 a 00 h", "deliveryMin": null, "envioGratisDesde": null},
+  {"id": "barrio-sur", "nombre": "Barrio Sur", "direccion": "Lamadrid 1150, Barrio Sur, San Miguel de Tucumán", "lat": -26.8405, "lng": -65.2072, "horario": "12 a 16 h y 20 a 00 h", "deliveryMin": null, "envioGratisDesde": null},
+  {"id": "yerba-buena", "nombre": "Yerba Buena", "direccion": null, "lat": null, "lng": null, "horario": "12 a 16 h y 20 a 00 h", "deliveryMin": null, "envioGratisDesde": null},
+  {"id": "tafi-viejo", "nombre": "Tafí Viejo", "direccion": null, "lat": null, "lng": null, "horario": "12 a 16 h y 20 a 00 h", "deliveryMin": null, "envioGratisDesde": null},
+  {"id": "banda-rio-sali", "nombre": "Banda del Río Salí", "direccion": null, "lat": null, "lng": null, "horario": "12 a 16 h y 20 a 00 h", "deliveryMin": null, "envioGratisDesde": null}
 ]

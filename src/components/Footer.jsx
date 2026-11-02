@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="footer-top">
           <div className="footer-marca">
             <Link to="/" className="logo" aria-label="Piaceres, ir al inicio"><Monograma /><span className="logo-txt">PIACERES</span></Link>
-            <p>Parrilla a la leña, pastas de autor y cocina vegetariana. Cinco casas en Tucumán.</p>
+            <p>Parrilla a la leña, pastas de autor y cocina vegetariana. Seis casas en Tucumán.</p>
           </div>
           <nav aria-label="Pie de página">
             <h2>Navegación</h2>

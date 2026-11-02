@@ -54,7 +54,7 @@ export default function Sucursales() {
         <div className="reveal">
           <Etiqueta>Sucursales</Etiqueta>
           <h2 className="titulo" id="suc-tit">Tu Piaceres más cercano</h2>
-          <p className="parrafo">Cinco casas en Tucumán. Usá tu ubicación o elegí tu zona para ver dirección, horarios y delivery.</p>
+          <p className="parrafo">Seis casas en Tucumán. Usá tu ubicación o elegí tu zona para ver dirección, horarios y delivery.</p>
           <div className="geo">
             <button type="button" className="btn btn-sec" onClick={usarUbicacion} disabled={buscando}>Usar mi ubicación</button>
             <p className="geo-msg" role="status">{msg}</p>

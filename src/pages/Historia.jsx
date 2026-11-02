@@ -25,7 +25,7 @@ export default function Historia() {
                 primer local.
               </p>
               <p className="parrafo">
-                Hoy Piaceres tiene cinco sucursales y sigue siendo lo que fue desde el primer día. En nuestra carta
+                Hoy Piaceres tiene seis sucursales y sigue siendo lo que fue desde el primer día. En nuestra carta
                 conviven carnes nobles y una propuesta vegetariana de autor creada por Sofía, pensada con el mismo
                 cuidado y el mismo respeto por el producto. Porque en una buena mesa, nadie se queda afuera.
               </p>

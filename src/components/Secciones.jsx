@@ -34,7 +34,7 @@ export function Restaurante() {
               'Mediodía y noche, todos los días',
               'Entrada de cortesía de la casa',
               'Carta vegetariana completa',
-              'Delivery propio en cinco zonas',
+              'Delivery propio en seis zonas',
               'Vinos argentinos por copa',
             ]}
           />
@@ -269,7 +269,7 @@ export function HistoriaResumen() {
             <h2 className="titulo" id="sofia-tit">La cocina de Sofía</h2>
             <p className="parrafo">
               Sofía se formó como chef con una idea clara: que la cocina gourmet tenga lugar para todos. Con el apoyo
-              incondicional de su mamá y la ayuda de tíos y primos abrió el primer local. Hoy Piaceres tiene cinco
+              incondicional de su mamá y la ayuda de tíos y primos abrió el primer local. Hoy Piaceres tiene seis
               casas y la misma convicción de siempre.
             </p>
             <Link className="link-linea" to="/historia">Leer la historia completa <Flecha w={28} /></Link>
