@@ -19,7 +19,7 @@
           "nombre": "Tostadas de jamón crudo",
           "desc": "Masa madre, crudo estacionado, pera y queso crema.",
           "veg": false,
-          "precio": null,
+          "precio": 14500,
           "img": "tostadas-crudo"
         },
         {
@@ -27,7 +27,7 @@
           "nombre": "Bruschettas de tomate confitado",
           "desc": "Cherry asados, ricota de campo y albahaca.",
           "veg": true,
-          "precio": null,
+          "precio": 11900,
           "img": "bruschettas"
         },
         {
@@ -35,7 +35,7 @@
           "nombre": "Hongos rellenos",
           "desc": "Champiñones gratinados con queso crema y hierbas.",
           "veg": true,
-          "precio": null,
+          "precio": 12500,
           "img": "hongos"
         },
         {
@@ -43,7 +43,7 @@
           "nombre": "Rosas de papa",
           "desc": "Láminas crocantes con alioli de ajo asado.",
           "veg": true,
-          "precio": null,
+          "precio": 10900,
           "img": "rosas-papa"
         },
         {
@@ -51,7 +51,7 @@
           "nombre": "Tostadas de salmón ahumado",
           "desc": "Queso crema, rúcula y reducción de aceto.",
           "veg": false,
-          "precio": null,
+          "precio": 16900,
           "img": "salmon"
         }
       ]
@@ -67,7 +67,7 @@
           "nombre": "Tortelli al vino tinto",
           "desc": "Ricota y nuez, tomates cherry confitados y albahaca.",
           "veg": true,
-          "precio": null,
+          "precio": 21500,
           "img": "tortelli"
         },
         {
@@ -75,21 +75,21 @@
           "nombre": "Sorrentinos de calabaza asada",
           "desc": "Queso de cabra, nueces y manteca de salvia.",
           "veg": true,
-          "precio": null
+          "precio": 19900
         },
         {
           "id": "pappardelle",
           "nombre": "Pappardelle al ragú de osobuco",
           "desc": "Cocción lenta al malbec y gremolata.",
           "veg": false,
-          "precio": null
+          "precio": 24500
         },
         {
           "id": "noquis",
           "nombre": "Ñoquis de papa",
           "desc": "Hongos de estación y crema de parmesano.",
           "veg": true,
-          "precio": null
+          "precio": 18500
         }
       ]
     },
@@ -104,14 +104,14 @@
           "nombre": "Ojo de bife",
           "desc": "Papas rústicas al romero y chimichurri de hierbas.",
           "veg": false,
-          "precio": null
+          "precio": 38900
         },
         {
           "id": "lomo",
           "nombre": "Medallón de lomo",
           "desc": "Puré de papas rústico y tomates asados.",
           "veg": false,
-          "precio": null,
+          "precio": 36500,
           "img": "medallon-lomo"
         },
         {
@@ -119,14 +119,14 @@
           "nombre": "Entraña",
           "desc": "Criolla de pimientos asados y sal de Maras.",
           "veg": false,
-          "precio": null
+          "precio": 34900
         },
         {
           "id": "bondiola",
           "nombre": "Bondiola braseada",
           "desc": "Glaseado de miel y mostaza, puré de batata.",
           "veg": false,
-          "precio": null
+          "precio": 27900
         }
       ]
     },
@@ -141,7 +141,7 @@
           "nombre": "Zanahorias glaseadas",
           "desc": "Labneh, miel de tomillo y dukkah de avellanas.",
           "veg": true,
-          "precio": null,
+          "precio": 15900,
           "img": "zanahorias"
         },
         {
@@ -149,7 +149,7 @@
           "nombre": "Coles de Bruselas caramelizadas",
           "desc": "Glaseado de malta, nueces y hierbas frescas.",
           "veg": true,
-          "precio": null,
+          "precio": 14900,
           "img": "coles"
         },
         {
@@ -157,14 +157,14 @@
           "nombre": "Berenjena asada al miso",
           "desc": "Sésamo tostado, yogur y hojas verdes.",
           "veg": true,
-          "precio": null
+          "precio": 17500
         },
         {
           "id": "risotto",
           "nombre": "Risotto de hongos",
           "desc": "Hongos de pino, parmesano y aceite de trufa.",
           "veg": true,
-          "precio": null
+          "precio": 23900
         }
       ]
     },
@@ -179,14 +179,14 @@
           "nombre": "Tiramisú de la casa",
           "desc": "Mascarpone, café de especialidad y cacao.",
           "veg": true,
-          "precio": null
+          "precio": 9900
         },
         {
           "id": "volcan",
           "nombre": "Volcán de chocolate",
           "desc": "Con helado de crema y frutillas.",
           "veg": true,
-          "precio": null,
+          "precio": 10900,
           "img": "volcan"
         },
         {
@@ -194,7 +194,7 @@
           "nombre": "Peras al malbec",
           "desc": "Crema de vainilla y nueces caramelizadas.",
           "veg": true,
-          "precio": null,
+          "precio": 9500,
           "img": "peras"
         }
       ]
@@ -202,44 +202,44 @@
     {
       "id": "vinos",
       "titulo": "Vinos",
-      "nota": "por copa o botella",
+      "nota": "precio por copa",
       "comida": false,
       "items": [
         {
           "id": "malbec",
           "nombre": "Malbec de altura",
           "desc": "Valle de Uco, Mendoza",
-          "precio": null
+          "precio": 7500
         },
         {
           "id": "cabfranc",
           "nombre": "Cabernet Franc",
           "desc": "Gualtallary, Mendoza",
-          "precio": null
+          "precio": 8900
         },
         {
           "id": "pinot",
           "nombre": "Pinot Noir",
           "desc": "Patagonia",
-          "precio": null
+          "precio": 9500
         },
         {
           "id": "torrontes",
           "nombre": "Torrontés",
           "desc": "Cafayate, Salta",
-          "precio": null
+          "precio": 6900
         },
         {
           "id": "chardonnay",
           "nombre": "Chardonnay",
           "desc": "Tupungato, Mendoza",
-          "precio": null
+          "precio": 7500
         },
         {
           "id": "espumante",
           "nombre": "Espumante Brut Nature",
           "desc": "Método tradicional",
-          "precio": null
+          "precio": 8500
         }
       ]
     },
@@ -253,31 +253,31 @@
           "id": "negroni",
           "nombre": "Negroni de la casa",
           "desc": "Gin, vermut rosso y bitter",
-          "precio": null
+          "precio": 9500
         },
         {
           "id": "spritz",
           "nombre": "Spritz de pomelo",
           "desc": "Aperitivo, pomelo rosado y romero",
-          "precio": null
+          "precio": 8900
         },
         {
           "id": "gintonic",
           "nombre": "Gin tonic de pepino",
           "desc": "Gin, tónica y pimienta rosa",
-          "precio": null
+          "precio": 9900
         },
         {
           "id": "albahaca",
           "nombre": "Albahaca y limón",
           "desc": "Sin alcohol · limonada de albahaca y jengibre",
-          "precio": null
+          "precio": 5500
         },
         {
           "id": "frutos-rojos",
           "nombre": "Frutos rojos",
           "desc": "Sin alcohol · frutos del bosque, tónica y menta",
-          "precio": null
+          "precio": 5900
         }
       ]
     }
