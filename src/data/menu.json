@@ -253,10 +253,10 @@
         {
           "id": "salchichas-veganas",
           "nombre": "Salchichas parrilleras veganas con papas",
-          "desc": "A la leña, con papas rústicas al romero y chimichurri.",
+          "desc": "De soja texturizada, a la leña, con papas rústicas al romero y chimichurri.",
           "veg": true,
           "vegano": true,
-          "sinTacc": false,
+          "sinTacc": true,
           "precio": 18900,
           "min": 30,
           "popular": false,
