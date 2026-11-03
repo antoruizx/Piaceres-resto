@@ -166,6 +166,18 @@
           "popular": false,
           "nuevo": false,
           "oculto": true
+        },
+        {
+          "id": "prueba",
+          "nombre": "PRUEBA",
+          "desc": "Producto de prueba.",
+          "veg": false,
+          "vegano": false,
+          "sinTacc": false,
+          "precio": 1,
+          "min": 5,
+          "popular": false,
+          "nuevo": false
         }
       ]
     },
